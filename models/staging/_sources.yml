@@ -1,8 +1,10 @@
 version: 2
 
 sources:
-  - name: keboola
+  - name: raw
     description: Tables from Keboola Storage loaded into workspace via input mapping
+    database: "{{ target.database }}"
+    schema: "{{ target.schema }}"
     tables:
       - name: fake_client
         description: Raw client data from fake extractor

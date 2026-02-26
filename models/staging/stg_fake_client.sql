@@ -7,4 +7,4 @@ SELECT
     LOWER(TRIM(email)) AS email,
     TRIM(address) AS address,
     TRIM(city) AS city
-FROM {{ source('keboola', 'fake_client') }}
+FROM {{ source('raw', 'fake_client') }}
