@@ -1,9 +1,14 @@
 version: 2
 
 sources:
-  - name: keboola
-    description: Tables from Keboola Storage loaded into workspace
-    schema: "{{ env_var('DBT_KBC_DEV_SCHEMA') }}"
+  - name: raw
+    description: Tables from Keboola Storage bucket
+    database: "{{ target.database }}"
+    schema: out.c-mso_dev_dbt_test
+    quoting:
+      database: true
+      schema: true
+      identifier: true
     tables:
       - name: fake_client
         description: Raw client data from fake extractor

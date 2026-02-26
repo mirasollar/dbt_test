@@ -5,3 +5,9 @@ config-version: 2
 profile: 'user'
 
 model-paths: ["models"]
+
+# Exclude auto-generated sources from dbt runs
+models:
+  mso_dev_dbt_project:
+    _sources:
+      +enabled: false
