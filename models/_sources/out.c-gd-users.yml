@@ -1,0 +1,152 @@
+---
+version: 2
+sources:
+  - name: out.c-gd-users
+    freshness:
+      warn_after:
+        count: 1
+        period: day
+    database: '{{ env_var("DBT_KBC_DEV_DATABASE") }}'
+    schema: out.c-gd-users
+    loaded_at_field: '"_timestamp"'
+    tables:
+      - name: users-gd2
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: users-gd2-active
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: users-gd2-financni_reporting
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: users-gd2-financni_reporting_holding
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: users-gd2-obchod
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: users-gd2-produktovy_reporting
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: users-gd2-sreality_realman
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: users-gd2-tv_reporty
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: users-mufs-gd2
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: users-mufs-gd2-final
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: users-mufs-hr_a_neznam
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: users-mufs-manual
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: users-mufs-rtb
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: users-mufs-rtb2
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: users-mufs-rtb3
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: users-mufs-seznam_partner
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: users-mufs-seznam_partner_clanky
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: users-mufs-seznam_partner_doporucuje
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: users-mufs-seznam_partner_podcasty
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: users-mufs-seznam_partner_radio
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: users-mufs-seznam_partner_stream
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: users_gd
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns:
+          - name: '"login"'
+            tests:
+              - unique
+              - not_null
+          - name: '"project_id"'
+            tests:
+              - unique
+              - not_null

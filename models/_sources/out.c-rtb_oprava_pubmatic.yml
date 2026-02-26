@@ -1,0 +1,18 @@
+---
+version: 2
+sources:
+  - name: out.c-rtb_oprava_pubmatic
+    freshness:
+      warn_after:
+        count: 1
+        period: day
+    database: '{{ env_var("DBT_KBC_DEV_DATABASE") }}'
+    schema: out.c-rtb_oprava_pubmatic
+    loaded_at_field: '"_timestamp"'
+    tables:
+      - name: pubmatic_daily_stats_zaloha
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []

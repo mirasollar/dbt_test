@@ -1,0 +1,30 @@
+---
+version: 2
+sources:
+  - name: in.c-gooddata_objects_usage
+    freshness:
+      warn_after:
+        count: 1
+        period: day
+    database: '{{ env_var("DBT_KBC_DEV_DATABASE") }}'
+    schema: in.c-gooddata_objects_usage
+    loaded_at_field: '"_timestamp"'
+    tables:
+      - name: objects_usage_filter_kpi
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: objects_usage_main
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: objects_usage_rsm
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []

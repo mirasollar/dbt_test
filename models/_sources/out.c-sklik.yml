@@ -1,0 +1,116 @@
+---
+version: 2
+sources:
+  - name: out.c-sklik
+    freshness:
+      warn_after:
+        count: 1
+        period: day
+    database: '{{ env_var("DBT_KBC_DEV_DATABASE") }}'
+    schema: out.c-sklik
+    loaded_at_field: '"_timestamp"'
+    tables:
+      - name: anomaly_daily_increment
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: fact_sklik_complete_by_date
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: konektor_spravce_na_rus
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: ogar_onegar_stats
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: sklik_user_zone_stats
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns:
+          - name: '"date"'
+            tests:
+              - unique
+              - not_null
+          - name: '"placement_type_id"'
+            tests:
+              - unique
+              - not_null
+          - name: '"feedtag_id"'
+            tests:
+              - unique
+              - not_null
+          - name: '"ad_type_id"'
+            tests:
+              - unique
+              - not_null
+          - name: '"device_type_group_id"'
+            tests:
+              - unique
+              - not_null
+          - name: '"zone_id"'
+            tests:
+              - unique
+              - not_null
+          - name: '"rus_id"'
+            tests:
+              - unique
+              - not_null
+      - name: sklik_user_zone_stats_agregace
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: sklik_user_zone_stats_zaloha
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns:
+          - name: '"date"'
+            tests:
+              - unique
+              - not_null
+          - name: '"zone_id"'
+            tests:
+              - unique
+              - not_null
+          - name: '"placement_type_id"'
+            tests:
+              - unique
+              - not_null
+          - name: '"feedtag_id"'
+            tests:
+              - unique
+              - not_null
+          - name: '"ad_type_id"'
+            tests:
+              - unique
+              - not_null
+          - name: '"device_type_group_id"'
+            tests:
+              - unique
+              - not_null
+          - name: '"rus_id"'
+            tests:
+              - unique
+              - not_null
+      - name: szn_domains
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []

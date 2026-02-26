@@ -1,0 +1,96 @@
+---
+version: 2
+sources:
+  - name: in.c-fanda-report
+    freshness:
+      warn_after:
+        count: 1
+        period: day
+    database: '{{ env_var("DBT_KBC_DEV_DATABASE") }}'
+    schema: in.c-fanda-report
+    loaded_at_field: '"_timestamp"'
+    tables:
+      - name: divize_web_sklik_2019
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: divize_web_sklik_2020
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: sklik_rus_web_01_2019
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: sklik_rus_web_01_2020
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: sklik_rus_web_02_2019
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: sklik_rus_web_02_2020
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: sklik_rus_web_03_2019
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: sklik_rus_web_03_2020
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: sklik_rus_web_04_2019
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: sklik_rus_web_04_2020
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: sklik_rus_web_05_2019
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: sklik_rus_web_05_2020
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: sklik_rus_web_06_2019
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: sklik_rus_web_06_2020
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []

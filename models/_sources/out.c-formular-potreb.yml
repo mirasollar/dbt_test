@@ -1,0 +1,42 @@
+---
+version: 2
+sources:
+  - name: out.c-formular-potreb
+    freshness:
+      warn_after:
+        count: 1
+        period: day
+    database: '{{ env_var("DBT_KBC_DEV_DATABASE") }}'
+    schema: out.c-formular-potreb
+    loaded_at_field: '"_timestamp"'
+    tables:
+      - name: demonstration1
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: parsed_activity
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: potreby_python2-csv
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: potreby_test_vystup
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: potreby_test_vystup_pole
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []

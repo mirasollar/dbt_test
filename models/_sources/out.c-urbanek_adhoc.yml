@@ -1,0 +1,24 @@
+---
+version: 2
+sources:
+  - name: out.c-urbanek_adhoc
+    freshness:
+      warn_after:
+        count: 1
+        period: day
+    database: '{{ env_var("DBT_KBC_DEV_DATABASE") }}'
+    schema: out.c-urbanek_adhoc
+    loaded_at_field: '"_timestamp"'
+    tables:
+      - name: urbanek_kompletni_vystup
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: urbanek_kompletni_vystup_2022
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []

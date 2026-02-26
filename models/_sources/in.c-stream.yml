@@ -1,0 +1,182 @@
+---
+version: 2
+sources:
+  - name: in.c-stream
+    freshness:
+      warn_after:
+        count: 1
+        period: day
+    database: '{{ env_var("DBT_KBC_DEV_DATABASE") }}'
+    schema: in.c-stream
+    loaded_at_field: '"_timestamp"'
+    tables:
+      - name: ciselnik
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: rtb-produkty
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: rtb-sklik-produkty
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns:
+          - name: '"campaign_product_id"'
+            tests:
+              - unique
+              - not_null
+          - name: '"date"'
+            tests:
+              - unique
+              - not_null
+      - name: stream_10_18
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: stream_11_18
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: stream_12_18
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: stream_1_18
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: stream_2_18
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: stream_3_18
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: stream_4_18
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: stream_5_18
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: stream_6_18
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: stream_7_18
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: stream_8_18
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: stream_9_18
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: stream_videospot_10_18
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: stream_videospot_11_18
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: stream_videospot_12_18
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: stream_videospot_1_18
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: stream_videospot_2_18
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: stream_videospot_3_18
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: stream_videospot_4_18
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: stream_videospot_5_18
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: stream_videospot_6_18
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: stream_videospot_7_18
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: stream_videospot_8_18
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: stream_videospot_9_18
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []

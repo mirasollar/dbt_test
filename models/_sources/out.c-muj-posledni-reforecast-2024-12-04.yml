@@ -1,0 +1,30 @@
+---
+version: 2
+sources:
+  - name: out.c-muj-posledni-reforecast-2024-12-04
+    freshness:
+      warn_after:
+        count: 1
+        period: day
+    database: '{{ env_var("DBT_KBC_DEV_DATABASE") }}'
+    schema: out.c-muj-posledni-reforecast-2024-12-04
+    loaded_at_field: '"_timestamp"'
+    tables:
+      - name: CLIENT_LEGENDA
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: FAKTURACE_BEZ_ZASAHU
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: PREFAKTURACE_PENEZ_AGG
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []

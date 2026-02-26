@@ -1,0 +1,36 @@
+---
+version: 2
+sources:
+  - name: out.c-outh
+    freshness:
+      warn_after:
+        count: 1
+        period: day
+    database: '{{ env_var("DBT_KBC_DEV_DATABASE") }}'
+    schema: out.c-outh
+    loaded_at_field: '"_timestamp"'
+    tables:
+      - name: NESPAROVANI_KLIENTI_01
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: SPAROVANI_KLIENTI_02
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: SPAROVANI_KLIENTI_AGREGACE
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: SPAROVANI_KLIENTI_VIC_KLIENTU_03
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []

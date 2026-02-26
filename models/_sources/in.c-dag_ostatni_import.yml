@@ -1,0 +1,42 @@
+---
+version: 2
+sources:
+  - name: in.c-dag_ostatni_import
+    freshness:
+      warn_after:
+        count: 1
+        period: day
+    database: '{{ env_var("DBT_KBC_DEV_2516_DATABASE") }}'
+    schema: in.c-dag_ostatni_import
+    loaded_at_field: '"_timestamp"'
+    tables:
+      - name: hash_data_email
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns:
+          - name: '"retargeting_id"'
+            tests:
+              - unique
+              - not_null
+      - name: hash_data_email_20250213090812_kontrola
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns:
+          - name: '"retargeting_id"'
+            tests:
+              - unique
+              - not_null
+      - name: hash_data_email_20250213095100_kontrola_2
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns:
+          - name: '"retargeting_id"'
+            tests:
+              - unique
+              - not_null

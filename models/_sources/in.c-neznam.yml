@@ -1,0 +1,72 @@
+---
+version: 2
+sources:
+  - name: in.c-neznam
+    freshness:
+      warn_after:
+        count: 1
+        period: day
+    database: '{{ env_var("DBT_KBC_DEV_78_DATABASE") }}'
+    schema: in.c-rs-DWH_Seznam
+    loaded_at_field: '"_timestamp"'
+    tables:
+      - name: dochazka_absence
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: dochazka_attendance
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: dochazka_attendanceevent
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: dochazka_monthattendance
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: dochazka_overtimelog
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: dochazka_sensor
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: seznam_division
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: seznam_employee
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: seznam_job
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: seznam_person
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []

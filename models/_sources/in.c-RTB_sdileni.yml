@@ -1,0 +1,18 @@
+---
+version: 2
+sources:
+  - name: in.c-RTB_sdileni
+    freshness:
+      warn_after:
+        count: 1
+        period: day
+    database: '{{ env_var("DBT_KBC_DEV_78_DATABASE") }}'
+    schema: out.c-rs-main
+    loaded_at_field: '"_timestamp"'
+    tables:
+      - name: rtb_pubmatc2
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []

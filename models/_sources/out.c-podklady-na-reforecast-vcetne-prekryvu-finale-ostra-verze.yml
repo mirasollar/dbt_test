@@ -1,0 +1,36 @@
+---
+version: 2
+sources:
+  - name: out.c-podklady-na-reforecast-vcetne-prekryvu-finale-ostra-verze
+    freshness:
+      warn_after:
+        count: 1
+        period: day
+    database: '{{ env_var("DBT_KBC_DEV_DATABASE") }}'
+    schema: out.c-podklady-na-reforecast-vcetne-prekryvu-finale-ostra-verze
+    loaded_at_field: '"_timestamp"'
+    tables:
+      - name: CO_SE_NEODPLANOVALO
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: popisy_stavu_klientu
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: UMORENI_ODPLANU_A_DOBROPISU
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: VYSTUPNI_DATA
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []

@@ -1,0 +1,34 @@
+---
+version: 2
+sources:
+  - name: out.c-rozpad-onegaru-po-devicech
+    freshness:
+      warn_after:
+        count: 1
+        period: day
+    database: '{{ env_var("DBT_KBC_DEV_DATABASE") }}'
+    schema: out.c-rozpad-onegaru-po-devicech
+    loaded_at_field: '"_timestamp"'
+    tables:
+      - name: rozpad_onegaru_ogaru_po_zarizenich
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns:
+          - name: '"DT"'
+            tests:
+              - unique
+              - not_null
+          - name: '"TYP_REKLAMY"'
+            tests:
+              - unique
+              - not_null
+          - name: '"ZARIZENI_SKUPINA"'
+            tests:
+              - unique
+              - not_null
+          - name: '"DSP"'
+            tests:
+              - unique
+              - not_null

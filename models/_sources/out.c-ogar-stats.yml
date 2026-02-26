@@ -1,0 +1,74 @@
+---
+version: 2
+sources:
+  - name: out.c-ogar-stats
+    freshness:
+      warn_after:
+        count: 1
+        period: day
+    database: '{{ env_var("DBT_KBC_DEV_DATABASE") }}'
+    schema: out.c-ogar-stats
+    loaded_at_field: '"_timestamp"'
+    tables:
+      - name: only_ogar_stats
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns:
+          - name: '"date"'
+            tests:
+              - unique
+              - not_null
+          - name: '"dsp"'
+            tests:
+              - unique
+              - not_null
+          - name: '"adtype_id"'
+            tests:
+              - unique
+              - not_null
+          - name: '"orderid"'
+            tests:
+              - unique
+              - not_null
+          - name: '"campaignid"'
+            tests:
+              - unique
+              - not_null
+          - name: '"groupid"'
+            tests:
+              - unique
+              - not_null
+          - name: '"adid"'
+            tests:
+              - unique
+              - not_null
+          - name: '"rus_id"'
+            tests:
+              - unique
+              - not_null
+          - name: '"zoneid"'
+            tests:
+              - unique
+              - not_null
+          - name: '"feedtag_id"'
+            tests:
+              - unique
+              - not_null
+          - name: '"device_type"'
+            tests:
+              - unique
+              - not_null
+          - name: '"campaign_name"'
+            tests:
+              - unique
+              - not_null
+          - name: '"group_name"'
+            tests:
+              - unique
+              - not_null
+          - name: '"ad_name"'
+            tests:
+              - unique
+              - not_null

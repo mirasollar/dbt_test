@@ -1,0 +1,26 @@
+---
+version: 2
+sources:
+  - name: in.c-kds-team-wr-generic-441817147
+    freshness:
+      warn_after:
+        count: 1
+        period: day
+    database: '{{ env_var("DBT_KBC_DEV_DATABASE") }}'
+    schema: in.c-kds-team-wr-generic-441817147
+    loaded_at_field: '"_timestamp"'
+    tables:
+      - name: result_log
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns:
+          - name: '"row_id"'
+            tests:
+              - unique
+              - not_null
+          - name: '"status"'
+            tests:
+              - unique
+              - not_null

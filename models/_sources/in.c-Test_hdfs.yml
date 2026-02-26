@@ -1,0 +1,18 @@
+---
+version: 2
+sources:
+  - name: in.c-Test_hdfs
+    freshness:
+      warn_after:
+        count: 1
+        period: day
+    database: '{{ env_var("DBT_KBC_DEV_78_DATABASE") }}'
+    schema: in.c-hdfs
+    loaded_at_field: '"_timestamp"'
+    tables:
+      - name: web
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []

@@ -1,0 +1,92 @@
+---
+version: 2
+sources:
+  - name: in.c-keboola-ex-db-mysql-162257850
+    freshness:
+      warn_after:
+        count: 1
+        period: day
+    database: '{{ env_var("DBT_KBC_DEV_DATABASE") }}'
+    schema: in.c-keboola-ex-db-mysql-162257850
+    loaded_at_field: '"_timestamp"'
+    tables:
+      - name: leaflet
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns:
+          - name: '"id"'
+            tests:
+              - unique
+              - not_null
+      - name: leaflet-location
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns:
+          - name: '"leaflet_id"'
+            tests:
+              - unique
+              - not_null
+          - name: '"region"'
+            tests:
+              - unique
+              - not_null
+          - name: '"district"'
+            tests:
+              - unique
+              - not_null
+      - name: leaflet-location-stats
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns:
+          - name: '"leaflet_id"'
+            tests:
+              - unique
+              - not_null
+          - name: '"location"'
+            tests:
+              - unique
+              - not_null
+          - name: '"region"'
+            tests:
+              - unique
+              - not_null
+          - name: '"day"'
+            tests:
+              - unique
+              - not_null
+          - name: '"month"'
+            tests:
+              - unique
+              - not_null
+          - name: '"year"'
+            tests:
+              - unique
+              - not_null
+      - name: leaflet-stats
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns:
+          - name: '"leaflet_id"'
+            tests:
+              - unique
+              - not_null
+          - name: '"day"'
+            tests:
+              - unique
+              - not_null
+          - name: '"month"'
+            tests:
+              - unique
+              - not_null
+          - name: '"year"'
+            tests:
+              - unique
+              - not_null

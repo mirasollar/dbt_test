@@ -1,0 +1,392 @@
+---
+version: 2
+sources:
+  - name: in.c-keboola-ex-ftp-81098316
+    freshness:
+      warn_after:
+        count: 1
+        period: day
+    database: '{{ env_var("DBT_KBC_DEV_DATABASE") }}'
+    schema: in.c-keboola-ex-ftp-81098316
+    loaded_at_field: '"_timestamp"'
+    tables:
+      - name: aktualni_mesic_pro_plany
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns:
+          - name: '"rok"'
+            tests:
+              - unique
+              - not_null
+          - name: '"mesic"'
+            tests:
+              - unique
+              - not_null
+          - name: '"cas"'
+            tests:
+              - unique
+              - not_null
+      - name: porady_komplet
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns:
+          - name: '"Datum"'
+            tests:
+              - unique
+              - not_null
+          - name: '"Cas_od"'
+            tests:
+              - unique
+              - not_null
+          - name: '"Cas_do"'
+            tests:
+              - unique
+              - not_null
+          - name: '"Slozeny_porad"'
+            tests:
+              - unique
+              - not_null
+          - name: '"Atribut"'
+            tests:
+              - unique
+              - not_null
+          - name: '"Titul"'
+            tests:
+              - unique
+              - not_null
+      - name: profil_dne
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns:
+          - name: '"Vybrany_kanal"'
+            tests:
+              - unique
+              - not_null
+          - name: '"Datum"'
+            tests:
+              - unique
+              - not_null
+          - name: '"Cilove_skupiny"'
+            tests:
+              - unique
+              - not_null
+      - name: profil_hodiny
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns:
+          - name: '"Vybrany_kanal"'
+            tests:
+              - unique
+              - not_null
+          - name: '"Datum"'
+            tests:
+              - unique
+              - not_null
+          - name: '"Cas"'
+            tests:
+              - unique
+              - not_null
+          - name: '"Cilove_skupiny"'
+            tests:
+              - unique
+              - not_null
+      - name: profil_mesice
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns:
+          - name: '"Mesic"'
+            tests:
+              - unique
+              - not_null
+          - name: '"Rok"'
+            tests:
+              - unique
+              - not_null
+          - name: '"Vybrany_kanal"'
+            tests:
+              - unique
+              - not_null
+          - name: '"Cilove_skupiny"'
+            tests:
+              - unique
+              - not_null
+      - name: profil_mesice_15_69
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns:
+          - name: '"Mesic"'
+            tests:
+              - unique
+              - not_null
+          - name: '"Rok"'
+            tests:
+              - unique
+              - not_null
+          - name: '"Vybrany_kanal"'
+            tests:
+              - unique
+              - not_null
+          - name: '"Cilove_skupiny"'
+            tests:
+              - unique
+              - not_null
+      - name: profil_tydne
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns:
+          - name: '"Cislo_tydne"'
+            tests:
+              - unique
+              - not_null
+          - name: '"Rok"'
+            tests:
+              - unique
+              - not_null
+          - name: '"Vybrany_kanal"'
+            tests:
+              - unique
+              - not_null
+          - name: '"Cilove_skupiny"'
+            tests:
+              - unique
+              - not_null
+      - name: rating_obchod_plany
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns:
+          - name: '"rok"'
+            tests:
+              - unique
+              - not_null
+          - name: '"mesic"'
+            tests:
+              - unique
+              - not_null
+      - name: rating_share_minuty_srovnani_vek4plus
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns:
+          - name: '"Datum"'
+            tests:
+              - unique
+              - not_null
+          - name: '"Cas"'
+            tests:
+              - unique
+              - not_null
+      - name: realita_pro_plany_2023
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns:
+          - name: '"rok"'
+            tests:
+              - unique
+              - not_null
+          - name: '"mesic"'
+            tests:
+              - unique
+              - not_null
+          - name: '"cas"'
+            tests:
+              - unique
+              - not_null
+      - name: selfpromo
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns:
+          - name: '"Datum"'
+            tests:
+              - unique
+              - not_null
+          - name: '"Cas"'
+            tests:
+              - unique
+              - not_null
+          - name: '"Vybrany_kanal"'
+            tests:
+              - unique
+              - not_null
+      - name: share_vybrane_cra
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns:
+          - name: '"datum"'
+            tests:
+              - unique
+              - not_null
+          - name: '"cas"'
+            tests:
+              - unique
+              - not_null
+      - name: spoty
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns:
+          - name: '"Datum"'
+            tests:
+              - unique
+              - not_null
+          - name: '"Cas_od"'
+            tests:
+              - unique
+              - not_null
+          - name: '"Cas_do"'
+            tests:
+              - unique
+              - not_null
+          - name: '"TV_kanal"'
+            tests:
+              - unique
+              - not_null
+          - name: '"Firemni_znacka"'
+            tests:
+              - unique
+              - not_null
+      - name: test_profil_hodiny
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: trpl-30s
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns:
+          - name: '"Datum"'
+            tests:
+              - unique
+              - not_null
+          - name: '"Cas_od"'
+            tests:
+              - unique
+              - not_null
+          - name: '"Cas_do"'
+            tests:
+              - unique
+              - not_null
+          - name: '"TV_kanal"'
+            tests:
+              - unique
+              - not_null
+      - name: TV_porady
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns:
+          - name: '"TV_kanal"'
+            tests:
+              - unique
+              - not_null
+          - name: '"Titul"'
+            tests:
+              - unique
+              - not_null
+          - name: '"Datum"'
+            tests:
+              - unique
+              - not_null
+          - name: '"Cas_od"'
+            tests:
+              - unique
+              - not_null
+      - name: TV_porady_15_69
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns:
+          - name: '"TV_kanal"'
+            tests:
+              - unique
+              - not_null
+          - name: '"Datum"'
+            tests:
+              - unique
+              - not_null
+          - name: '"Titul"'
+            tests:
+              - unique
+              - not_null
+          - name: '"Cas_od"'
+            tests:
+              - unique
+              - not_null
+      - name: TV_porady_4plus
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns:
+          - name: '"TV_kanal"'
+            tests:
+              - unique
+              - not_null
+          - name: '"Datum"'
+            tests:
+              - unique
+              - not_null
+          - name: '"Titul"'
+            tests:
+              - unique
+              - not_null
+          - name: '"Cas_od"'
+            tests:
+              - unique
+              - not_null
+      - name: upoutavky_den
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns:
+          - name: '"Titul"'
+            tests:
+              - unique
+              - not_null
+          - name: '"Datum"'
+            tests:
+              - unique
+              - not_null
+      - name: upoutavky_tyden
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns:
+          - name: '"Titul"'
+            tests:
+              - unique
+              - not_null
+          - name: '"Tyden"'
+            tests:
+              - unique
+              - not_null

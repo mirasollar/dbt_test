@@ -1,0 +1,152 @@
+---
+version: 2
+sources:
+  - name: in.c-static
+    freshness:
+      warn_after:
+        count: 1
+        period: day
+    database: '{{ env_var("DBT_KBC_DEV_DATABASE") }}'
+    schema: in.c-static
+    loaded_at_field: '"_timestamp"'
+    tables:
+      - name: advertisment_region
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: cileni_sklik_imprese
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns:
+          - name: '"u1_userid"'
+            tests:
+              - unique
+              - not_null
+          - name: '"u1_year"'
+            tests:
+              - unique
+              - not_null
+          - name: '"u1_month"'
+            tests:
+              - unique
+              - not_null
+          - name: '"u1_feedtag"'
+            tests:
+              - unique
+              - not_null
+          - name: '"u1_typ"'
+            tests:
+              - unique
+              - not_null
+      - name: ciselnik-nuts
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: ciselnik_agentury_publicis_pro_import_keboola_2021_01_27
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: ciselnik_pozice_cileni
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: ciselnik_sklik_cileni
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: ciselnik_sluzby_yield
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: dates
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: klid_stary_novy_zajem
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns:
+          - name: '"stare_zajem_id"'
+            tests:
+              - unique
+              - not_null
+          - name: '"nove_zajem_id"'
+            tests:
+              - unique
+              - not_null
+      - name: nasnuts_to_nuts4
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns:
+          - name: '"nas_nuts"'
+            tests:
+              - unique
+              - not_null
+      - name: prechod_na_jine
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: products-union
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: rtb_pro_ctr
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: sklik_plan_vyhledavani
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: statni_svatky
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: validita_statusu
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: velikonoce
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: yield_sezona_ciselnik
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []

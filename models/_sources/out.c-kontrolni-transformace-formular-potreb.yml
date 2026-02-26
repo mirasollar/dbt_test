@@ -1,0 +1,24 @@
+---
+version: 2
+sources:
+  - name: out.c-kontrolni-transformace-formular-potreb
+    freshness:
+      warn_after:
+        count: 1
+        period: day
+    database: '{{ env_var("DBT_KBC_DEV_DATABASE") }}'
+    schema: out.c-kontrolni-transformace-formular-potreb
+    loaded_at_field: '"_timestamp"'
+    tables:
+      - name: kontrolni_sestava_formular_potreb
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: ktere_policka_chybi
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []

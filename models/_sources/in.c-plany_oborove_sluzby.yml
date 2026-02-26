@@ -1,0 +1,100 @@
+---
+version: 2
+sources:
+  - name: in.c-plany_oborove_sluzby
+    freshness:
+      warn_after:
+        count: 1
+        period: day
+    database: '{{ env_var("DBT_KBC_DEV_DATABASE") }}'
+    schema: in.c-plany_oborove_sluzby
+    loaded_at_field: '"_timestamp"'
+    tables:
+      - name: ciselnik_video_instream_outstream
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: plany_oborove_sluzby_celek_2018
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: plany_oborove_sluzby_celek_2018_uprava
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns:
+          - name: '"typ"'
+            tests:
+              - unique
+              - not_null
+          - name: '"sluzba_data"'
+            tests:
+              - unique
+              - not_null
+          - name: '"typ_data"'
+            tests:
+              - unique
+              - not_null
+          - name: '"mesic_text"'
+            tests:
+              - unique
+              - not_null
+      - name: plan_firmy_2018
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: plan_sauto_rtb_2018
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: plan_video_instream_outstream
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: plan_zbozi_stara_gd_2018_11_29
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns:
+          - name: '"rok_datum"'
+            tests:
+              - unique
+              - not_null
+      - name: plan_zbozi_stara_gd_2018_11_29_3830
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns:
+          - name: '"rok_datum"'
+            tests:
+              - unique
+              - not_null
+      - name: plan_zbozi_stara_gd_2018_11_29_7986
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns:
+          - name: '"rok_datum"'
+            tests:
+              - unique
+              - not_null
+      - name: zb_plan_2018
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []

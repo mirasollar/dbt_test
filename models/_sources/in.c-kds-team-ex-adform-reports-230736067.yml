@@ -1,0 +1,50 @@
+---
+version: 2
+sources:
+  - name: in.c-kds-team-ex-adform-reports-230736067
+    freshness:
+      warn_after:
+        count: 1
+        period: day
+    database: '{{ env_var("DBT_KBC_DEV_DATABASE") }}'
+    schema: in.c-kds-team-ex-adform-reports-230736067
+    loaded_at_field: '"_timestamp"'
+    tables:
+      - name: report-data
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns:
+          - name: '"bannerID"'
+            tests:
+              - unique
+              - not_null
+          - name: '"banner"'
+            tests:
+              - unique
+              - not_null
+          - name: '"campaign"'
+            tests:
+              - unique
+              - not_null
+          - name: '"client"'
+            tests:
+              - unique
+              - not_null
+          - name: '"lineItemID"'
+            tests:
+              - unique
+              - not_null
+          - name: '"lineItem"'
+            tests:
+              - unique
+              - not_null
+          - name: '"date"'
+            tests:
+              - unique
+              - not_null
+          - name: '"campaignCurrency"'
+            tests:
+              - unique
+              - not_null

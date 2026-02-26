@@ -1,0 +1,36 @@
+---
+version: 2
+sources:
+  - name: out.c-telesales
+    freshness:
+      warn_after:
+        count: 1
+        period: day
+    database: '{{ env_var("DBT_KBC_DEV_DATABASE") }}'
+    schema: out.c-telesales
+    loaded_at_field: '"_timestamp"'
+    tables:
+      - name: agentevent_gd
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: agentevent_logoff_gd
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: agentevent_logoff_gd1
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: agent_gd
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []

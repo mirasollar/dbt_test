@@ -1,0 +1,22 @@
+---
+version: 2
+sources:
+  - name: in.c-sos_out_campaignproduct
+    freshness:
+      warn_after:
+        count: 1
+        period: day
+    database: '{{ env_var("DBT_KBC_DEV_78_DATABASE") }}'
+    schema: out.c-rs-main
+    loaded_at_field: '"_timestamp"'
+    tables:
+      - name: sos-campaignproduct
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns:
+          - name: '"campaign_product_id"'
+            tests:
+              - unique
+              - not_null

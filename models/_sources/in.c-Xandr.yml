@@ -1,0 +1,276 @@
+---
+version: 2
+sources:
+  - name: in.c-Xandr
+    freshness:
+      warn_after:
+        count: 1
+        period: day
+    database: '{{ env_var("DBT_KBC_DEV_78_DATABASE") }}'
+    schema: in.c-rs-DWH_Seznam
+    loaded_at_field: '"_timestamp"'
+    tables:
+      - name: buyer_segment_performance
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns:
+          - name: '"day"'
+            tests:
+              - unique
+              - not_null
+          - name: '"buying_currency"'
+            tests:
+              - unique
+              - not_null
+          - name: '"advertiser_id"'
+            tests:
+              - unique
+              - not_null
+          - name: '"advertiser_name"'
+            tests:
+              - unique
+              - not_null
+          - name: '"campaign_id"'
+            tests:
+              - unique
+              - not_null
+          - name: '"campaign_name"'
+            tests:
+              - unique
+              - not_null
+          - name: '"insertion_order_id"'
+            tests:
+              - unique
+              - not_null
+          - name: '"insertion_order_name"'
+            tests:
+              - unique
+              - not_null
+          - name: '"line_item_id"'
+            tests:
+              - unique
+              - not_null
+          - name: '"line_item_name"'
+            tests:
+              - unique
+              - not_null
+          - name: '"segment_id"'
+            tests:
+              - unique
+              - not_null
+          - name: '"segment_name"'
+            tests:
+              - unique
+              - not_null
+      - name: network_analytics
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns:
+          - name: '"day"'
+            tests:
+              - unique
+              - not_null
+          - name: '"buying_currency"'
+            tests:
+              - unique
+              - not_null
+          - name: '"advertiser_id"'
+            tests:
+              - unique
+              - not_null
+          - name: '"advertiser_name"'
+            tests:
+              - unique
+              - not_null
+          - name: '"campaign_id"'
+            tests:
+              - unique
+              - not_null
+          - name: '"campaign_name"'
+            tests:
+              - unique
+              - not_null
+          - name: '"insertion_order_id"'
+            tests:
+              - unique
+              - not_null
+          - name: '"insertion_order_name"'
+            tests:
+              - unique
+              - not_null
+          - name: '"line_item_id"'
+            tests:
+              - unique
+              - not_null
+          - name: '"line_item_name"'
+            tests:
+              - unique
+              - not_null
+          - name: '"supply_type"'
+            tests:
+              - unique
+              - not_null
+          - name: '"creative_id"'
+            tests:
+              - unique
+              - not_null
+          - name: '"creative_name"'
+            tests:
+              - unique
+              - not_null
+          - name: '"size"'
+            tests:
+              - unique
+              - not_null
+          - name: '"split_id"'
+            tests:
+              - unique
+              - not_null
+          - name: '"split_name"'
+            tests:
+              - unique
+              - not_null
+          - name: '"placement_id"'
+            tests:
+              - unique
+              - not_null
+          - name: '"placement_name"'
+            tests:
+              - unique
+              - not_null
+          - name: '"deal_id"'
+            tests:
+              - unique
+              - not_null
+          - name: '"deal_name"'
+            tests:
+              - unique
+              - not_null
+          - name: '"media_type"'
+            tests:
+              - unique
+              - not_null
+          - name: '"media_type_id"'
+            tests:
+              - unique
+              - not_null
+          - name: '"publisher_name"'
+            tests:
+              - unique
+              - not_null
+      - name: network_attributed_conversions
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns:
+          - name: '"day"'
+            tests:
+              - unique
+              - not_null
+          - name: '"advertiser_id"'
+            tests:
+              - unique
+              - not_null
+          - name: '"advertiser_name"'
+            tests:
+              - unique
+              - not_null
+          - name: '"campaign_id"'
+            tests:
+              - unique
+              - not_null
+          - name: '"campaign_name"'
+            tests:
+              - unique
+              - not_null
+          - name: '"line_item_id"'
+            tests:
+              - unique
+              - not_null
+          - name: '"line_item_name"'
+            tests:
+              - unique
+              - not_null
+          - name: '"pixel_id"'
+            tests:
+              - unique
+              - not_null
+          - name: '"pixel_name"'
+            tests:
+              - unique
+              - not_null
+          - name: '"post_click_or_post_view_conv"'
+            tests:
+              - unique
+              - not_null
+          - name: '"auction_id"'
+            tests:
+              - unique
+              - not_null
+          - name: '"datetime"'
+            tests:
+              - unique
+              - not_null
+          - name: '"imp_time"'
+            tests:
+              - unique
+              - not_null
+      - name: network_site_domain_performance
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns:
+          - name: '"day"'
+            tests:
+              - unique
+              - not_null
+          - name: '"buying_currency"'
+            tests:
+              - unique
+              - not_null
+          - name: '"advertiser_id"'
+            tests:
+              - unique
+              - not_null
+          - name: '"advertiser_name"'
+            tests:
+              - unique
+              - not_null
+          - name: '"campaign_id"'
+            tests:
+              - unique
+              - not_null
+          - name: '"campaign_name"'
+            tests:
+              - unique
+              - not_null
+          - name: '"insertion_order_id"'
+            tests:
+              - unique
+              - not_null
+          - name: '"insertion_order_name"'
+            tests:
+              - unique
+              - not_null
+          - name: '"line_item_id"'
+            tests:
+              - unique
+              - not_null
+          - name: '"line_item_name"'
+            tests:
+              - unique
+              - not_null
+          - name: '"site_domain"'
+            tests:
+              - unique
+              - not_null
+          - name: '"supply_type"'
+            tests:
+              - unique
+              - not_null

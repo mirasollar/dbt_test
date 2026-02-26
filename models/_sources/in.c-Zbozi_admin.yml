@@ -1,0 +1,38 @@
+---
+version: 2
+sources:
+  - name: in.c-Zbozi_admin
+    freshness:
+      warn_after:
+        count: 1
+        period: day
+    database: '{{ env_var("DBT_KBC_DEV_78_DATABASE") }}'
+    schema: in.c-keboola-ex-http-558508003
+    loaded_at_field: '"_timestamp"'
+    tables:
+      - name: zbozi_admin_rozsirene_ruses
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns:
+          - name: '"date"'
+            tests:
+              - unique
+              - not_null
+          - name: '"rus_id"'
+            tests:
+              - unique
+              - not_null
+          - name: '"shop_id"'
+            tests:
+              - unique
+              - not_null
+          - name: '"zbozi_inzerat"'
+            tests:
+              - unique
+              - not_null
+          - name: '"typ_nabidky"'
+            tests:
+              - unique
+              - not_null

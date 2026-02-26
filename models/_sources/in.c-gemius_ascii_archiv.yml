@@ -1,0 +1,174 @@
+---
+version: 2
+sources:
+  - name: in.c-gemius_ascii_archiv
+    freshness:
+      warn_after:
+        count: 1
+        period: day
+    database: '{{ env_var("DBT_KBC_DEV_DATABASE") }}'
+    schema: in.c-gemius_ascii_archiv
+    loaded_at_field: '"_timestamp"'
+    tables:
+      - name: 2018_01_month_AUD
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: 2018_01_month_MED
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: 2018_01_month_WEI
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: 2018_04_month_AUD
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: 2018_04_month_MED
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: 2018_04_month_WEI
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: 2021_01_month_AUD
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: 2021_01_month_MED
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: 2021_01_month_WEI
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: 2021_12_month_AUD
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: 2021_12_month_MED
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: 2021_12_month_WEI
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: 2023_01_month_AUD
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: 2023_01_month_MED
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: 2023_01_month_WEI
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: aud_2014_2017_monthly
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: aud_2018_2023_monthly
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: aud_2018_monthly
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: aud_2019_monthly
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: aud_2020_monthly
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: aud_2021_monthly
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: aud_2022_monthly
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: aud_2023_monthly
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: fact_seznam_cz_root_2018_2023
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: med_seznam
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: wei_2014_2017_monthly
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: wei_2018_2023_monthly
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []

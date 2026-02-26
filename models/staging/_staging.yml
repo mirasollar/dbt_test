@@ -1,0 +1,31 @@
+version: 2
+
+models:
+  - name: stg_fake_client
+    description: Cleaned and standardized client data
+    columns:
+      - name: client_id
+        description: Unique client identifier
+        tests:
+          - unique
+          - not_null
+      - name: email
+        description: Client email address
+        tests:
+          - not_null
+
+  - name: stg_fake_revenue
+    description: Cleaned revenue transaction data
+    columns:
+      - name: client_id
+        description: Client identifier
+        tests:
+          - not_null
+      - name: revenue_date
+        description: Transaction date
+        tests:
+          - not_null
+      - name: revenue_amount
+        description: Revenue amount in decimal format
+        tests:
+          - not_null

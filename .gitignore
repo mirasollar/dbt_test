@@ -1,0 +1,27 @@
+# dbt
+target/
+dbt_packages/
+logs/
+*.log
+
+# Keboola CLI generated files with credentials
+.env.local
+profiles.yml
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.Python
+venv/
+env/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo

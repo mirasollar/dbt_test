@@ -1,0 +1,140 @@
+---
+version: 2
+sources:
+  - name: in.c-selfpromo_videoportal
+    freshness:
+      warn_after:
+        count: 1
+        period: day
+    database: '{{ env_var("DBT_KBC_DEV_DATABASE") }}'
+    schema: in.c-selfpromo_videoportal
+    loaded_at_field: '"_timestamp"'
+    tables:
+      - name: account
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns:
+          - name: '"Currency"'
+            tests:
+              - unique
+              - not_null
+          - name: '"Day"'
+            tests:
+              - unique
+              - not_null
+      - name: ad_report
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns:
+          - name: '"Day"'
+            tests:
+              - unique
+              - not_null
+          - name: '"Campaign_ID"'
+            tests:
+              - unique
+              - not_null
+          - name: '"Ad_group_ID"'
+            tests:
+              - unique
+              - not_null
+      - name: campaigns
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns:
+          - name: '"customerId"'
+            tests:
+              - unique
+              - not_null
+          - name: '"id"'
+            tests:
+              - unique
+              - not_null
+      - name: campaign_report
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: customers
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns:
+          - name: '"customerId"'
+            tests:
+              - unique
+              - not_null
+      - name: final_url
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns:
+          - name: '"Day"'
+            tests:
+              - unique
+              - not_null
+          - name: '"Campaign_ID"'
+            tests:
+              - unique
+              - not_null
+          - name: '"Ad_group_ID"'
+            tests:
+              - unique
+              - not_null
+          - name: '"Final_URL"'
+            tests:
+              - unique
+              - not_null
+      - name: final_url_2
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns:
+          - name: '"Campaign_ID"'
+            tests:
+              - unique
+              - not_null
+          - name: '"Ad_group_ID"'
+            tests:
+              - unique
+              - not_null
+          - name: '"Final_URL"'
+            tests:
+              - unique
+              - not_null
+          - name: '"Day"'
+            tests:
+              - unique
+              - not_null
+      - name: final_url_terestrika
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns:
+          - name: '"Day"'
+            tests:
+              - unique
+              - not_null
+          - name: '"Campaign_ID"'
+            tests:
+              - unique
+              - not_null
+          - name: '"Ad_group_ID"'
+            tests:
+              - unique
+              - not_null
+          - name: '"Final_URL"'
+            tests:
+              - unique
+              - not_null

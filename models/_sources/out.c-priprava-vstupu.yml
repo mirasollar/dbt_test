@@ -1,0 +1,40 @@
+---
+version: 2
+sources:
+  - name: out.c-priprava-vstupu
+    freshness:
+      warn_after:
+        count: 1
+        period: day
+    database: '{{ env_var("DBT_KBC_DEV_DATABASE") }}'
+    schema: out.c-priprava-vstupu
+    loaded_at_field: '"_timestamp"'
+    tables:
+      - name: client_user_ownership_snapshot
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns:
+          - name: '"id"'
+            tests:
+              - unique
+              - not_null
+      - name: obchod-advert-obsazenost_reklamnich_pozic_denne_spojeno
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: obchod-advert-obsazenost_reklamnich_pozic_spojeno
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: obchod-ask-financefirmy_sjednoceni
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []

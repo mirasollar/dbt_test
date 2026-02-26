@@ -1,0 +1,178 @@
+---
+version: 2
+sources:
+  - name: in.c-revolt-bi-ex-adform-dmp-386007204
+    freshness:
+      warn_after:
+        count: 1
+        period: day
+    database: '{{ env_var("DBT_KBC_DEV_DATABASE") }}'
+    schema: in.c-revolt-bi-ex-adform-dmp-386007204
+    loaded_at_field: '"_timestamp"'
+    tables:
+      - name: advertisers_by_PID
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns:
+          - name: '"id"'
+            tests:
+              - unique
+              - not_null
+      - name: agencies
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns:
+          - name: '"id"'
+            tests:
+              - unique
+              - not_null
+      - name: audience_by_date
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns:
+          - name: '"audienceBySources"'
+            tests:
+              - unique
+              - not_null
+      - name: categories_by_PID
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns:
+          - name: '"id"'
+            tests:
+              - unique
+              - not_null
+      - name: comparison_by_SID
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns:
+          - name: '"segmentId"'
+            tests:
+              - unique
+              - not_null
+      - name: dataconsumers_by_PID
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns:
+          - name: '"id"'
+            tests:
+              - unique
+              - not_null
+      - name: dataproviders
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns:
+          - name: '"id"'
+            tests:
+              - unique
+              - not_null
+      - name: datausage
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns:
+          - name: '"date"'
+            tests:
+              - unique
+              - not_null
+          - name: '"dataProviderId"'
+            tests:
+              - unique
+              - not_null
+          - name: '"sourceId"'
+            tests:
+              - unique
+              - not_null
+          - name: '"agencyId"'
+            tests:
+              - unique
+              - not_null
+          - name: '"advertiserId"'
+            tests:
+              - unique
+              - not_null
+          - name: '"campaignId"'
+            tests:
+              - unique
+              - not_null
+          - name: '"orderId"'
+            tests:
+              - unique
+              - not_null
+          - name: '"lineItemId"'
+            tests:
+              - unique
+              - not_null
+          - name: '"segmentsGroupId"'
+            tests:
+              - unique
+              - not_null
+          - name: '"segmentIds"'
+            tests:
+              - unique
+              - not_null
+      - name: dynamics_by_SID
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns:
+          - name: '"segmentId"'
+            tests:
+              - unique
+              - not_null
+      - name: overall
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns:
+          - name: '"dataProviderId"'
+            tests:
+              - unique
+              - not_null
+      - name: segments_by_CID
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns:
+          - name: '"id"'
+            tests:
+              - unique
+              - not_null
+      - name: segments_by_PID
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns:
+          - name: '"id"'
+            tests:
+              - unique
+              - not_null
+      - name: totals_by_SID
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns:
+          - name: '"segmentId"'
+            tests:
+              - unique
+              - not_null

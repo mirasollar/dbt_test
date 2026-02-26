@@ -1,0 +1,86 @@
+---
+version: 2
+sources:
+  - name: out.c-obchodni
+    freshness:
+      warn_after:
+        count: 1
+        period: day
+    database: '{{ env_var("DBT_KBC_DEV_78_DATABASE") }}'
+    schema: in.c-rs-DWH_Seznam
+    loaded_at_field: '"_timestamp"'
+    tables:
+      - name: agentura_borgis_a
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: agentura_radio_a
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: doplneni-sklik-plneni
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns:
+          - name: '"agency_id"'
+            tests:
+              - unique
+              - not_null
+          - name: '"date"'
+            tests:
+              - unique
+              - not_null
+      - name: formular_potreb_v
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: klienti_rozobchodovani
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: nove_kampane_v_intervalu
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: out_plany_produkt
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: recommended-to-user
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: sbs_naklady
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: sbs_plany
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: sos-recommend-user
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []

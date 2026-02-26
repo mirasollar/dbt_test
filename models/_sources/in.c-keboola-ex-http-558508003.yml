@@ -1,0 +1,348 @@
+---
+version: 2
+sources:
+  - name: in.c-keboola-ex-http-558508003
+    freshness:
+      warn_after:
+        count: 1
+        period: day
+    database: '{{ env_var("DBT_KBC_DEV_DATABASE") }}'
+    schema: in.c-keboola-ex-http-558508003
+    loaded_at_field: '"_timestamp"'
+    tables:
+      - name: admin_reports_category
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: admin_reports_premise
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: admin_reports_product
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: admin_reports_productdb_events
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: admin_reports_productdb_event_source
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: admin_reports_productdb_event_type
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: admin_reports_requests
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: admin_reports_reviews
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: admin_reports_role
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: admin_reports_user
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: raw_zbozi_stats
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: test_emailing_emaily
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: test_emailing_vlastnosti_provozoven
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: test_prokliky
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: zbozi_admin_rozsirene_10_2024_fix
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: zbozi_admin_rozsirene_ruses
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns:
+          - name: '"date"'
+            tests:
+              - unique
+              - not_null
+          - name: '"rus_id"'
+            tests:
+              - unique
+              - not_null
+          - name: '"shop_id"'
+            tests:
+              - unique
+              - not_null
+          - name: '"zbozi_inzerat"'
+            tests:
+              - unique
+              - not_null
+          - name: '"typ_nabidky"'
+            tests:
+              - unique
+              - not_null
+      - name: zbozi_admin_rozsirene_ruses_10528
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns:
+          - name: '"date"'
+            tests:
+              - unique
+              - not_null
+          - name: '"rus_id"'
+            tests:
+              - unique
+              - not_null
+          - name: '"owner_rus_id"'
+            tests:
+              - unique
+              - not_null
+          - name: '"shop_id"'
+            tests:
+              - unique
+              - not_null
+          - name: '"premise_id_firmy"'
+            tests:
+              - unique
+              - not_null
+          - name: '"nabidky"'
+            tests:
+              - unique
+              - not_null
+          - name: '"prokliky"'
+            tests:
+              - unique
+              - not_null
+          - name: '"konverze"'
+            tests:
+              - unique
+              - not_null
+          - name: '"proklikano_zbozi"'
+            tests:
+              - unique
+              - not_null
+          - name: '"prum_cena_proklik"'
+            tests:
+              - unique
+              - not_null
+          - name: '"zbozi_inzerat"'
+            tests:
+              - unique
+              - not_null
+          - name: '"typ_nabidky"'
+            tests:
+              - unique
+              - not_null
+      - name: zbozi_admin_rozsirene_ruses_7423
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns:
+          - name: '"date"'
+            tests:
+              - unique
+              - not_null
+          - name: '"rus_id"'
+            tests:
+              - unique
+              - not_null
+          - name: '"owner_rus_id"'
+            tests:
+              - unique
+              - not_null
+          - name: '"shop_id"'
+            tests:
+              - unique
+              - not_null
+          - name: '"premise_id_firmy"'
+            tests:
+              - unique
+              - not_null
+          - name: '"nabidky"'
+            tests:
+              - unique
+              - not_null
+          - name: '"prokliky"'
+            tests:
+              - unique
+              - not_null
+          - name: '"konverze"'
+            tests:
+              - unique
+              - not_null
+          - name: '"proklikano_zbozi"'
+            tests:
+              - unique
+              - not_null
+          - name: '"prum_cena_proklik"'
+            tests:
+              - unique
+              - not_null
+          - name: '"zbozi_inzerat"'
+            tests:
+              - unique
+              - not_null
+          - name: '"typ_nabidky"'
+            tests:
+              - unique
+              - not_null
+      - name: zbozi_kategorie_cesta
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: zbozi_prokliky
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: zbozi_vlastnosti_provozoven
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns:
+          - name: '"premise_id"'
+            tests:
+              - unique
+              - not_null
+          - name: '"date"'
+            tests:
+              - unique
+              - not_null
+          - name: '"total_offers_count"'
+            tests:
+              - unique
+              - not_null
+          - name: '"visible_offers_count"'
+            tests:
+              - unique
+              - not_null
+          - name: '"categorized_offers_count"'
+            tests:
+              - unique
+              - not_null
+          - name: '"paired_to_product_offers_count"'
+            tests:
+              - unique
+              - not_null
+          - name: '"standard_conversion_code_enabled"'
+            tests:
+              - unique
+              - not_null
+          - name: '"shop_reviews_count"'
+            tests:
+              - unique
+              - not_null
+          - name: '"shop_review_reactions_count"'
+            tests:
+              - unique
+              - not_null
+          - name: '"has_logo"'
+            tests:
+              - unique
+              - not_null
+          - name: '"shares_customer_emails"'
+            tests:
+              - unique
+              - not_null
+          - name: '"is_bidding"'
+            tests:
+              - unique
+              - not_null
+          - name: '"has_carriers"'
+            tests:
+              - unique
+              - not_null
+          - name: '"has_depots"'
+            tests:
+              - unique
+              - not_null
+          - name: '"delivery_is_manual"'
+            tests:
+              - unique
+              - not_null
+          - name: '"delivery_update_date"'
+            tests:
+              - unique
+              - not_null
+          - name: '"delivery_depot_update_date"'
+            tests:
+              - unique
+              - not_null
+          - name: '"is_migrated_to_sklik"'
+            tests:
+              - unique
+              - not_null
+          - name: '"banned_offers_count"'
+            tests:
+              - unique
+              - not_null
+      - name: zek_marketing_agg_visits_v2
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: zek_marketing_clicks_v2
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: zek_marketing_visits_v2
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []

@@ -1,0 +1,420 @@
+---
+version: 2
+sources:
+  - name: in.web_analytics_complete_visits
+    freshness:
+      warn_after:
+        count: 1
+        period: day
+    database: '{{ env_var("DBT_KBC_DEV_DATABASE") }}'
+    schema: in.web_analytics_complete_visits
+    loaded_at_field: '"_timestamp"'
+    tables:
+      - name: ASK
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: ATLAS
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: AUTOWEB
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: AZBOZI
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: BLIFT
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: BLOGY
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: BLOGYADMIN
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: CALENDAR
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: CLASSIC
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: DOPLNKYP
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: ELEARN
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: EMAIL
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: EMPRO
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: EXPRESFM
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: FIRMY
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: FIRMYMW
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: FULLTEXT
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: HOROSKOP
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: HP
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: HRY
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: IDT
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: KARIERA
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: KATALOG
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: KRASTY
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: KUPICZ
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: KUPIMAG
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: KZONE
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: LOGINSZN
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: MAPY
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: MARKET
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: NAPOVEDA
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: NEZNAM
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: NOVINKY
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: PCBROWSER
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: PLAYEREMBED
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: POCASI
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: PODCASTY
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: PREMIUM
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: PROFIL
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: PROZENY
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: PUBTRAN
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: RECASSP
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: REG
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: SAUTO
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: SBAZAR
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: SBLOG
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: SBROWSER
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: SDOVOLEN
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: SEZNAMMENU
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: SEZNAMTALKS
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: SEZNAMTV
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: SKLIK
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: SLOVNIK
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: SOS
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: SPORT
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: SPRACE
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: SREALITY
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: STREAM
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: SUPER
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: SWEB
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: TV
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: VIDEA
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: VYVOJARI
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: WA
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: WM
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: XFEED
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: ZBOZI
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: ZPRAVY
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []

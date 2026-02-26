@@ -1,0 +1,24 @@
+---
+version: 2
+sources:
+  - name: out.c-sklik_user_client_data
+    freshness:
+      warn_after:
+        count: 1
+        period: day
+    database: '{{ env_var("DBT_KBC_DEV_DATABASE") }}'
+    schema: out.c-sklik_user_client_data
+    loaded_at_field: '"_timestamp"'
+    tables:
+      - name: client_eshop
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: sklik_user_client
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []

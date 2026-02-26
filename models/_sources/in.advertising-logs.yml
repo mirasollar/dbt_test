@@ -1,0 +1,180 @@
+---
+version: 2
+sources:
+  - name: in.advertising-logs
+    freshness:
+      warn_after:
+        count: 1
+        period: day
+    database: '{{ env_var("DBT_KBC_DEV_DATABASE") }}'
+    schema: in.advertising-logs
+    loaded_at_field: '"_timestamp"'
+    tables:
+      - name: AUCTION
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: BIDS
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: CLEAN_CLICK
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: DISCARDED_CLICK
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: ICA
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: IMPRESSION_CONTEXT_CLEAN
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: IMPRESSION_CONTEXT_DISCARDED
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: IMPRESSION_OGAR_CLEAN
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: IMPRESSION_ONEGAR_CLEAN
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: IMPRESSION_ONEGAR_DISCARDED
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: IMPRESSION_SEARCH_LAYOUTED_CONFIRMED
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: POTENTIAL_CONVERSION_SKLIK
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: POTENTIAL_CONVERSION_ZBOZI
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: POTENTIAL_IMPRESSION_SEARCH
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: POTENTIAL_LOSTIMPRESSION_SEARCH
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: POTENTIAL_NOBUDGETIMPRESSION_SEARCH
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: RETARGETING
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: RETARGETING_CONSENTLESS
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: SKLIK_APIDRAK
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: SKLIK_IMPRESSION_CONTEXT_LINKED_CLICK
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: SKLIK_LINKED_CONVERSION
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: SKLIK_LOSTIMPRESSION_CONTEXT
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: SKLIK_RTBBID_CONTEXT
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: STREAM_SKLIK_LINKED_CONVERSION
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: ZBOZI_CLICK_CLEAN
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: ZBOZI_CLICK_DISCARDED
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: ZBOZI_IMPRESSION_CLEAN
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: ZBOZI_LINKED_CONVERSION
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []

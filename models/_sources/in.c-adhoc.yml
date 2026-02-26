@@ -1,0 +1,1456 @@
+---
+version: 2
+sources:
+  - name: in.c-adhoc
+    freshness:
+      warn_after:
+        count: 1
+        period: day
+    database: '{{ env_var("DBT_KBC_DEV_DATABASE") }}'
+    schema: in.c-adhoc
+    loaded_at_field: '"_timestamp"'
+    tables:
+      - name: 202103_adid_imp
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: adblock_znovu_2021_07_13
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: advertisment_stat_age_monthly_2022_09_21
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: advertisment_stat_age_monthly_2023_08_17
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: advertisment_stat_sex_monthly_2022_09_21
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: advertisment_stat_sex_monthly_2023_08_17
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: adverts
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: advertstat_advertism_stat_fieldoi_monthly
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: adverty_pro_porovnani_2021_05_18
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: advert_2021_03_25_statistika
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: agregovana_data_pro_foi_2021_12_16
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: analytika_forum24
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: analytika_forum24_nesp
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: appnexus_test
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: astratex
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: autoforum_AB_analytika
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: autoforum_AB_clicks
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns:
+          - name: '"requestid"'
+            tests:
+              - unique
+              - not_null
+      - name: autoforum_AB_cpi
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: autoforum_AB_request
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns:
+          - name: '"t1_requestid"'
+            tests:
+              - unique
+              - not_null
+      - name: brandove_formaty_2023_09_11
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: campaign_product_history
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: campaign_product_history_diff
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: category_sbazar
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: ceskenoviny_AB_analytika
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: ceskenoviny_AB_clicks
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: ceskenoviny_AB_cpi
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: ceskenoviny_AB_request
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: ceskenoviny_AB_visible_imp
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: cilena_reklama_validace_2023_09_04
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: ciselnik_kategorii_2020_06
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: ciselnik_regionu_2018_09_04
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: ciselnik_rus_id_jakub
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: ciselnik_zone_name
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: ciselnik_zone_name_novy
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: cisleniky_campaign_sklik_mezery
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: clean_click_logs_vitalweb
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: client_history_2022_04_21
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: client_reforecasting
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: cpa_dotacky
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: criteo_daily_reve_adhock_static
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: cross_up_sale_40021
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: database_revenues_sreality_jednorazovky_historie
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: data_celkem_rouskari_2021_05_07_import_kbc
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: data_outh_sklik
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: data_prefakturace_final_2022_06_15
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: dmp_03_09_2024
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: DMP_advisers_temp
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: dmp_fix_2024_04_04
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: dmp_fix_2024_12_28
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: dmp_fix_2024_12_31
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: dmp_fix_2025_01_07_08
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: dmp_fix_2025_02_12
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: dmp_fix_2025_03_18
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: dmp_fix_2025_03_26
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: dmp_fix_2025_03_9-11
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: dmp_fix_missing_dates
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: Email_profi_clients
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: email_salesbranch
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: eshopy_data_2024_01_23
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: estimatedcpi
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: estimatedcpi_clk_rus
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: estimatedcpi_imp_rus
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: field_of_interest
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: finalni_data_outh_reporter_2024_01_23
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: final_pro_prafakturaci_plan_2021_12_09
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: firmy_01
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns:
+          - name: '"client_id"'
+            tests:
+              - unique
+              - not_null
+          - name: '"premisocategory"'
+            tests:
+              - unique
+              - not_null
+          - name: '"start_date"'
+            tests:
+              - unique
+              - not_null
+      - name: firmy_aukce_agg
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: firmy_aukce_oboje
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: firmy_data_outh
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: firmy_encashing_history
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: firmy_encashing_history_od_10_2024
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: firmy_hp_box
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: foiky_adhoc_2021_05_10_rucne
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: foi_ciselnik_2021_12_16
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: forum24_AB_analytika
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: forum24_AB_clicks
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: forum24_AB_cpi
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: forum24_AB_request
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns:
+          - name: '"t1_requestid"'
+            tests:
+              - unique
+              - not_null
+      - name: garantovany_prostor
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: gd_firmy_reve
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: hive_forum24
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns:
+          - name: '"t1_requestid"'
+            tests:
+              - unique
+              - not_null
+      - name: hive_sklik_2021_05_24_rouskari_cervenec_vejs_2020
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: hive_vitalweb_01_2019
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: ic_doplnit
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: id-klient-doplneni
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: import_kbc_odplan
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: json_televize_leden_2022
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns:
+          - name: '"id"'
+            tests:
+              - unique
+              - not_null
+      - name: json_televize_prosinec_2021
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns:
+          - name: '"id"'
+            tests:
+              - unique
+              - not_null
+      - name: json_televize_unor_2022
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns:
+          - name: '"id"'
+            tests:
+              - unique
+              - not_null
+      - name: kategorie_cross
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: klienti_aspk
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: klienti_bez_skliku
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: klienti_bisnode
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: klienti_branove_pozice_2023_09_12
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: klienti_k_exportu
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: konverze_2021_11_26
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: kupi_advert_requesty
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: kupi_ssp_requesty
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: lenemayer_formaty
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: logy_2024_06_21
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: media-outdoormediamessage
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: merk
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: nachlingerova_cp_product_quantity
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: negarant_ciselnik_do_probehle_2022_02_23
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: nove_zalozene_premisy_dle_data_v_2019
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: novinky_47629
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: novinky_55011
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: odplan_displej_db_2022_prosinec
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: odplan_long_data_2024_12_05
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: ondra_displej_odplan
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: onegar_floating_testovani
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: order_campaign_product_analytici_2020_vejs
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: papousek_zajmy_1
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: papousek_zajmy_2
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: papousek_zoky_1
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: papousek_zoky_2
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: petr_lateral
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: pn_lat
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns:
+          - name: '"requestid"'
+            tests:
+              - unique
+              - not_null
+      - name: prefakturace_2024_12_05
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: prefakturace_pro_import_kbc_2022_prosinec
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: premises_all
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: premise_client
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: premise_clients
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: premise_url
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: premisy_bez_klienta
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: prevody_vlastnictvi
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: product_price_special
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: product_type
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: prohlizec_2024_03_04
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: prokliky_pn_2021_11_26
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: pro_plan_2022_regionalni_prodej_import_kbc
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: pro_plan_na_rok_2023
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: pro_plan_test_2024_11_19
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: psp_data_mapping_test
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: realcpc
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: request_logs_vitalweb
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: result_file
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: rouskari_2021_04_2021
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: rouskari_adhoc_sklik_vysledek
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: rtb_podklady_2025
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: rtb_tech_2019
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: rt_6894
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: rus_drtg_2019
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: rus_k_doplneni
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: rus_maxcpc
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: sauto_adverts
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns:
+          - name: '"statistics_date"'
+            tests:
+              - unique
+              - not_null
+          - name: '"statistics_advert_id"'
+            tests:
+              - unique
+              - not_null
+      - name: securitymagazin_adid
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: securitymagazin_analytika
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: securitymagazin_clicks
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: securitymagazin_cpi
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: sensquare_test
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: seznam_mailing_mailkit_test
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: shared_target_clause
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: shared_target_clause_20230713
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: shared_target_clause_agg_2023_08_30
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: sids_exclusive
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: sklik_imprese
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: Sklik_kontrola_proklikano_2022_10a11
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: sklik_konz_rus_manual
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: sklik_rus_user_id
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: sklik_rus_web_01_2019
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: sklik_rus_web_01_2020
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: sklik_rus_web_02_2019
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: sklik_rus_web_02_2020
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: sklik_test_odmazavani
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: sklik_user_agg
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: sklik_vysledek_2021_04_23
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: sklik_zone_agg
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: sme_fakturace
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: sos-cileni
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: sos-invoiceproduct_test_20220708094500
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns:
+          - name: '"invoice_product_id"'
+            tests:
+              - unique
+              - not_null
+      - name: spojeno_borgis_agregace_2023_12_04
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: spoty
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: spot_creative
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns:
+          - name: '"spot_id"'
+            tests:
+              - unique
+              - not_null
+      - name: sreality-ic
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: sreality_daily_advert_business_model
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: tabule1
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: tabule2
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: tabule3
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: televize_2021_07_29
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: televize_adhoc_2021_07_29
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: televize_json_komplet
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns:
+          - name: '"id"'
+            tests:
+              - unique
+              - not_null
+      - name: testovaci_data_odplan_2024_06_20
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: test_emailing_vse_2019_06_28
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: test_fakturace
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: Test_importu_do_mailkitu_1
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: Test_mailkitu_1
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: test_novy_invoice_product
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns:
+          - name: '"id"'
+            tests:
+              - unique
+              - not_null
+      - name: test_olda_001
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: top_1000_klienti_obory
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: tv_plany_reklamni_break
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: upravene_sentisquare
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: urbanek_adhoc
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns:
+          - name: '"id"'
+            tests:
+              - unique
+              - not_null
+      - name: urbanek_spoty
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns:
+          - name: '"advertisment_id"'
+            tests:
+              - unique
+              - not_null
+      - name: url_zone_062019
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: users_imp_cp-8105590590
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: videospot_5_6_19
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: videospot_danes_2020_01
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: videospot_danes_2020_02
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: videospot_danes_2020_03
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: videospot_danes_2020_04
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: videospot_danes_2020_05
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: videospot_danes_2020_06
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: video_imp_1
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: video_imp_2
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: video_imp_3
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: video_imp_4
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: video_imp_5
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: video_json
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: video_richm_stats_1
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: video_richm_stats_2
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: video_richm_stats_3
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: video_richm_stats_4
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: video_richm_stats_5
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: vitalweb_ab_test
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: vodrazkova_2022_10_06
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: volnamista_imprese
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: volnamista_requesty
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: vybrane_campaign_producty
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: vyklikana_2018_11_07
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: vyklikana_kveten_2018
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: vykon_sklik_cileni
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: zajmy_1_jakub
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: zajmy_1_jakub_20201002144716
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: zajmy_2_jakub
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: zajmy_3_jakub
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: zbozi_proklik_premise
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: zony
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []

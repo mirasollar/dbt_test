@@ -1,0 +1,978 @@
+---
+version: 2
+sources:
+  - name: in.advertising-codebooks
+    freshness:
+      warn_after:
+        count: 1
+        period: day
+    database: '{{ env_var("DBT_KBC_DEV_DATABASE") }}'
+    schema: in.advertising-codebooks
+    loaded_at_field: '"_timestamp"'
+    tables:
+      - name: ADVERTSTAT_ADVERTISMENT_STAT_FIELDOI_MONTHLY
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: ADVERT_ADSPACE_USAGE_APPLICABILITY
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: ADVERT_ADVERTISMENT_CAPPING
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: ADVERT_ADVERTISMENT_COLLOCATION
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: ADVERT_ADVERTISMENT_PRICE
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: ADVERT_ADVERTISMENT_REGION
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: ADVERT_ADVERTISMENT_SECTION
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: ADVERT_AD_FORMAT
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: ADVERT_AD_FORMAT_TEMPLATE
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: ADVERT_AD_FORMAT_TEMPLATE_CREATIVE_DEF
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: ADVERT_AGE_GROUP
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: ADVERT_BANNER_CREATIVE
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: ADVERT_BANNER_CREATIVE_SDN
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: ADVERT_BANNER_TEMPLATE
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: ADVERT_BANNER_TEMPLATE_CREATIVE_DEF
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: ADVERT_BANNER_URL
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: ADVERT_CAMPAIGN_CAPPING
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: ADVERT_CAMPAIGN_CLASS
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: ADVERT_CAMPAIGN_DISLIKED_GROUP
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: ADVERT_CONSUMPTION_TYPE
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: ADVERT_CONTEXT_FIELD_OF_INTEREST
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: ADVERT_COUNTRY
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: ADVERT_CREATIVE_TYPE
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: ADVERT_DELIVERY_TYPE
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: ADVERT_EXTERNAL_PARTNER
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: ADVERT_EXTERNAL_PARTNER_DATA
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: ADVERT_FIELD_OF_INTEREST
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: ADVERT_FIELD_OF_INTEREST_MAP
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: ADVERT_HOLIDAY
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: ADVERT_INCOME_GROUP
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: ADVERT_LANGUAGE
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: ADVERT_MIN_DAY_IMPRESSION_AD_CHECK_LEVEL
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: ADVERT_NUTS_LEVEL
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: ADVERT_PLANNING_STRATEGY
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: ADVERT_PRICE_MODEL
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: ADVERT_REDIRECTION_TYPE
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: ADVERT_REGION
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: ADVERT_REGION_MAPPING
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: ADVERT_REPLICATION_STAMP
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: ADVERT_SERVER
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: ADVERT_SHARED_TARGET_CLAUSE
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: ADVERT_SHARED_TARGET_CLAUSE_AGE_GROUP
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: ADVERT_SITE_OF_INTEREST
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: ADVERT_SPOT_CAPPING
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: ADVERT_ZONE_AD_FORMAT
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: ADVERT_ZONE_ALLOWED_DSP
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: ADVERT_ZONE_COMPAT_MAPPING
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: ADVERT_ZONE_FLOATING
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: ADVERT_ZONE_WITH_SECTIONS
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: COMMON_DATASET_BROWSER
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: COMMON_DATASET_FEEDTAG
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: COMMON_DATASET_HW
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: COMMON_DATASET_HWMANUFACTURER
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: COMMON_DATASET_INTERESTS
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: COMMON_DATASET_OS
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: OLAP_3_SI__SKLIK_KONZ_RUS
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: SKLIK_COMMON_AD_TYPE
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: SKLIK_COMMON_AGE
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: SKLIK_COMMON_CAMPAIGN_TYPE
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: SKLIK_COMMON_CAMPAIGN_VIDEO_FORMAT
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: SKLIK_COMMON_CONVERSION_TYPE
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: SKLIK_COMMON_GENDER
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: SKLIK_COMMON_PAYMENT_METHOD
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: SKLIK_COMMON_REGION_PREDEFINED
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: SKLIK_COMMON_URL
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: SKLIK_ID_USER_NODE
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: SKLIK_NODE_AD
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: SKLIK_NODE_AD_BANNER
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: SKLIK_NODE_AD_BRANDING
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: SKLIK_NODE_AD_BUMPER
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: SKLIK_NODE_AD_COMMON
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: SKLIK_NODE_AD_COMMON_STAGING_1078927382
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: SKLIK_NODE_AD_COMMON_STAGING_2077597426
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: SKLIK_NODE_AD_EXTERNAL
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: SKLIK_NODE_AD_HTML5_BANNER
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: SKLIK_NODE_AD_STAGING_1914991311
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: SKLIK_NODE_AD_STAGING_417887430
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: SKLIK_NODE_AD_VIDEO
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: SKLIK_NODE_BUDGET
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: SKLIK_NODE_CAMPAIGN
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: SKLIK_NODE_CAMPAIGN_DEVICE
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: SKLIK_NODE_CAMPAIGN_OPTIMAL_BUDGET
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: SKLIK_NODE_CAMPAIGN_ZBOZI_PREMISE
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: SKLIK_NODE_CONVERSION
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: SKLIK_NODE_GROUP
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: SKLIK_NODE_INTEND
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: SKLIK_NODE_INTEREST
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: SKLIK_NODE_KEYWORD
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: SKLIK_NODE_ORDER_CAMPAIGN
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: SKLIK_NODE_PATTERN
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: SKLIK_NODE_PRODUCT_SET
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: SKLIK_NODE_SITELINK
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: SKLIK_NODE_THEME
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: SKLIK_NODE_USER
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: SKLIK_NODE_USER_SETTING
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: SKLIK_PARTNER_AD_FORMAT
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: SKLIK_PARTNER_AD_TYPE
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: SKLIK_PARTNER_AGE
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: SKLIK_PARTNER_COMMISSION_PAYMENT
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: SKLIK_PARTNER_COMMISSION_PAYMENT_PROCESS_STATUS
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: SKLIK_PARTNER_CONTENT
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: SKLIK_PARTNER_CONTENT_SERVICE
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: SKLIK_PARTNER_DEVICE
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: SKLIK_PARTNER_DOPORUCOVANI_REQUEST
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: SKLIK_PARTNER_DSP
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: SKLIK_PARTNER_MODEL
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: SKLIK_PARTNER_PARTNER
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: SKLIK_PARTNER_PARTNER_CONTENT_SERVICE
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: SKLIK_PARTNER_PARTNER_CONTENT_SERVICE_STATUS
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: SKLIK_PARTNER_PARTNER_PARTNER_TAG
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: SKLIK_PARTNER_PARTNER_STATUS
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: SKLIK_PARTNER_PARTNER_TAG
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: SKLIK_PARTNER_PAYMENT_STATUS
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: SKLIK_PARTNER_SOURCE
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: SKLIK_PARTNER_STAGE
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: SKLIK_PARTNER_STOP_REASON
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: SKLIK_PARTNER_TERMS
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: SKLIK_PARTNER_TERMS_ACCEPT
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: SKLIK_PARTNER_TERMS_CHAIN
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: SKLIK_PARTNER_URL
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: SKLIK_PARTNER_WEB
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: SKLIK_PARTNER_ZONE
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: SKLIK_PARTNER_ZONE_DSP_SETTINGS
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: SKLIK_PARTNER_ZONE_LABEL
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: SKLIK_PARTNER_ZONE_SETTINGS
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: SKLIK_PARTNER_ZONE_ZONE_LABEL
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: SKLIK_RELATION_ACCESS_TYPE
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: SKLIK_RELATION_ACTION
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: SKLIK_RELATION_AD_TEMPLATE
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: SKLIK_RELATION_AD_TEMPLATE_SET
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: SKLIK_RELATION_CAMPAIGN_ZBOZI_PREMISE_HISTORY
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: SKLIK_RELATION_DYNAMIC_RETARGETING_LIST_CONDITION
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: SKLIK_RELATION_GROUP_RETARGETING
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: SKLIK_RELATION_INTEND_TREE
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: SKLIK_RELATION_NEGATIVE_CAMPAIGN_RETARGETING
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: SKLIK_RELATION_NEGATIVE_GROUP_RETARGETING
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: SKLIK_RELATION_RETARGETING_CONDITION
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: SKLIK_RELATION_RETARGETING_LIST
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: SKLIK_RELATION_RETARGETING_LIST_GROUP
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: SKLIK_RELATION_RETARGETING_LIST_LOOKALIKE
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: SKLIK_RELATION_RETARGETING_LIST_TYPE
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: SKLIK_RELATION_ROLE_ACTION
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: SKLIK_RELATION_USER_AGENCY
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: SKLIK_RELATION_USER_AGENCY_ACCOUNT_STATUS
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: SKLIK_RELATION_USER_ROLE
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: SKLIK_RELATION_USER_USER
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: SKLIK_RELATION_USER_USER_CHANGE_ACCESS_STATUS
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: SKLIK_RELATION_USER_USER_STATUS_TYPE
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: SKLIK_RUS_USER
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: SK_OGAR_ORDER
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: SK_REPORT_CLIENT_STAT_TEMPLATE
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: SK_SSP_PREVIEW_URL
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: SOS_CLIENT
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: SOS_CLIENT_CONNECTION
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: SOS_CLIENT_HISTORY
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: SOS_CLIENT_RUS
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: SOS_CLIENT_RUS_ADMINISTRATOR
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: SOS_CLIENT_RUS_ADMINISTRATOR_TYPE
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: SOS_CLIENT_USER_ADMINISTRATOR
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: SOS_CLIENT_USER_OWNERSHIP
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: SOS_USER
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []

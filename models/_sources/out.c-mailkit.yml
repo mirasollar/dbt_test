@@ -1,0 +1,144 @@
+---
+version: 2
+sources:
+  - name: out.c-mailkit
+    freshness:
+      warn_after:
+        count: 1
+        period: day
+    database: '{{ env_var("DBT_KBC_DEV_DATABASE") }}'
+    schema: out.c-mailkit
+    loaded_at_field: '"_timestamp"'
+    tables:
+      - name: emaily_vse_historicky_data
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns:
+          - name: '"email"'
+            tests:
+              - unique
+              - not_null
+      - name: emaily_vse_historicky_firmy_upsale
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: emaily_vse_historicky_firmy_upsale_data
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns:
+          - name: '"email"'
+            tests:
+              - unique
+              - not_null
+          - name: '"custom2"'
+            tests:
+              - unique
+              - not_null
+      - name: firmy_oteviraci_doba_final_cast_1
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: firmy_oteviraci_doba_final_cast_2
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: firmy_oteviraci_doba_final_cast_3
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: firmy_oteviraci_doba_final_cast_4
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: firmy_pravidelny_mailing_cast_1
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: firmy_pravidelny_mailing_cast_2
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: firmy_pravidelny_mailing_cast_3
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: firmy_pravidelny_mailing_cast_4
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: mailkit_vystup_firmy_upsale
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: mailkit_vystup_sklik2_final
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: mailkit_vystup_sklik3_final
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: mailkit_vystup_sklik_final
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: mailkit_vystup_zbozi_emailing2
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: mailpool_client
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: mailpool_message
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: relevantni_kontakty_sos
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: report_mailing_zbozi_sklik
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []

@@ -1,0 +1,18 @@
+---
+version: 2
+sources:
+  - name: in.c-HR_MUFs
+    freshness:
+      warn_after:
+        count: 1
+        period: day
+    database: '{{ env_var("DBT_KBC_DEV_941_DATABASE") }}'
+    schema: out.c-HR_mufs
+    loaded_at_field: '"_timestamp"'
+    tables:
+      - name: HR_neznam_user_MUFs
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []

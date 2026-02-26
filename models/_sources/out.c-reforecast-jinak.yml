@@ -1,0 +1,24 @@
+---
+version: 2
+sources:
+  - name: out.c-reforecast-jinak
+    freshness:
+      warn_after:
+        count: 1
+        period: day
+    database: '{{ env_var("DBT_KBC_DEV_DATABASE") }}'
+    schema: out.c-reforecast-jinak
+    loaded_at_field: '"_timestamp"'
+    tables:
+      - name: POPIS_STAVU_CLIENTA
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: VYSTUP_PYTHON
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []

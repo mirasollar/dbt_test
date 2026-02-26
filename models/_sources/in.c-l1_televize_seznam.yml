@@ -1,0 +1,66 @@
+---
+version: 2
+sources:
+  - name: in.c-l1_televize_seznam
+    freshness:
+      warn_after:
+        count: 1
+        period: day
+    database: '{{ env_var("DBT_KBC_DEV_4406_DATABASE") }}'
+    schema: out.c-l1_televize_seznam
+    loaded_at_field: '"_timestamp"'
+    tables:
+      - name: L1_TELEVIZE_SEZNAM_BROADCAST_ADVERTISING_TIME_SPOTS_CLEAN
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: L1_TELEVIZE_SEZNAM_ESTIMATED_NN_SALES_GRPL_CLEAN
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: L1_TELEVIZE_SEZNAM_MARKET_DYNAMICS_GRPL_CLEAN
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: L1_TELEVIZE_SEZNAM_PLANS_CLEAN
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: L1_TELEVIZE_SEZNAM_RATING_SPOTS_DAILY_CLEAN
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: L1_TELEVIZE_SEZNAM_RATING_SPOTS_MONTHLY_CLEAN
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: L1_TELEVIZE_SEZNAM_SALES_CLEAN
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: L1_TELEVIZE_SEZNAM_USER_SHARE_REACH_ATSR_DAILY_CLEAN
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: L1_TELEVIZE_SEZNAM_USER_SHARE_REACH_ATSR_MONTHLY_CLEAN
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []

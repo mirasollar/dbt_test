@@ -1,0 +1,18 @@
+---
+version: 2
+sources:
+  - name: out.c-petr_adhoc_2021_11_25
+    freshness:
+      warn_after:
+        count: 1
+        period: day
+    database: '{{ env_var("DBT_KBC_DEV_DATABASE") }}'
+    schema: out.c-petr_adhoc_2021_11_25
+    loaded_at_field: '"_timestamp"'
+    tables:
+      - name: vystup
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []

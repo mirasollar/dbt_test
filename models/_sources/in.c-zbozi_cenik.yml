@@ -1,0 +1,18 @@
+---
+version: 2
+sources:
+  - name: in.c-zbozi_cenik
+    freshness:
+      warn_after:
+        count: 1
+        period: day
+    database: '{{ env_var("DBT_KBC_DEV_DATABASE") }}'
+    schema: in.c-zbozi_cenik
+    loaded_at_field: '"_timestamp"'
+    tables:
+      - name: raw_data_kliky
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []

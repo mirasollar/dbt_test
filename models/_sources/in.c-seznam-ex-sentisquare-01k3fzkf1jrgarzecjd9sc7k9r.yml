@@ -1,0 +1,22 @@
+---
+version: 2
+sources:
+  - name: in.c-seznam-ex-sentisquare-01k3fzkf1jrgarzecjd9sc7k9r
+    freshness:
+      warn_after:
+        count: 1
+        period: day
+    database: '{{ env_var("DBT_KBC_DEV_DATABASE") }}'
+    schema: in.c-seznam-ex-sentisquare-01k3fzkf1jrgarzecjd9sc7k9r
+    loaded_at_field: '"_timestamp"'
+    tables:
+      - name: documents
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns:
+          - name: '"activity_name"'
+            tests:
+              - unique
+              - not_null

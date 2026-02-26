@@ -1,0 +1,30 @@
+---
+version: 2
+sources:
+  - name: out.c-sauto
+    freshness:
+      warn_after:
+        count: 1
+        period: day
+    database: '{{ env_var("DBT_KBC_DEV_DATABASE") }}'
+    schema: out.c-sauto
+    loaded_at_field: '"_timestamp"'
+    tables:
+      - name: sauto_inzeraty_formulare_with_sos_clientid
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: sauto_topovani_with_sos_clientid
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: sauto_topovani_with_sos_client_id
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []

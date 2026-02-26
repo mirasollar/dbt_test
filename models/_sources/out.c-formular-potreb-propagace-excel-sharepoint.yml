@@ -1,0 +1,24 @@
+---
+version: 2
+sources:
+  - name: out.c-formular-potreb-propagace-excel-sharepoint
+    freshness:
+      warn_after:
+        count: 1
+        period: day
+    database: '{{ env_var("DBT_KBC_DEV_DATABASE") }}'
+    schema: out.c-formular-potreb-propagace-excel-sharepoint
+    loaded_at_field: '"_timestamp"'
+    tables:
+      - name: formular_potreb_pro_export_rozpocty_excel
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: formular_potreb_pro_export_zkusenosti_excel
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []

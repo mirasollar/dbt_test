@@ -1,0 +1,36 @@
+---
+version: 2
+sources:
+  - name: in.c-keboola-ex-onedrive-533070508
+    freshness:
+      warn_after:
+        count: 1
+        period: day
+    database: '{{ env_var("DBT_KBC_DEV_DATABASE") }}'
+    schema: in.c-keboola-ex-onedrive-533070508
+    loaded_at_field: '"_timestamp"'
+    tables:
+      - name: skaly-klientu
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: skaly-klientu-sklik
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: skaly_klientu_celek_mqy
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: skaly_klientu_sklik_mqy
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []

@@ -1,0 +1,104 @@
+---
+version: 2
+sources:
+  - name: in.c-sreality_db_snowflake
+    freshness:
+      warn_after:
+        count: 1
+        period: day
+    database: '{{ env_var("DBT_KBC_DEV_DATABASE") }}'
+    schema: in.c-sreality_db_snowflake
+    loaded_at_field: '"_timestamp"'
+    tables:
+      - name: sreality_vki_report
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns:
+          - name: '"datum"'
+            tests:
+              - unique
+              - not_null
+          - name: '"ico"'
+            tests:
+              - unique
+              - not_null
+          - name: '"client_id"'
+            tests:
+              - unique
+              - not_null
+          - name: '"seller_id"'
+            tests:
+              - unique
+              - not_null
+      - name: sreality_vki_report_20250617_zaloha
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns:
+          - name: '"datum"'
+            tests:
+              - unique
+              - not_null
+          - name: '"ico"'
+            tests:
+              - unique
+              - not_null
+          - name: '"client_id"'
+            tests:
+              - unique
+              - not_null
+          - name: '"seller_id"'
+            tests:
+              - unique
+              - not_null
+      - name: sreality_vki_statistika
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns:
+          - name: '"date"'
+            tests:
+              - unique
+              - not_null
+          - name: '"seller_id"'
+            tests:
+              - unique
+              - not_null
+      - name: sreality_vki_statistika_20250616_zaklad_pro_upravu
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns:
+          - name: '"date"'
+            tests:
+              - unique
+              - not_null
+          - name: '"seller_id"'
+            tests:
+              - unique
+              - not_null
+      - name: sreality_vki_statistika_test
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: sreality_vki_statistika_test_2
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns:
+          - name: '"date"'
+            tests:
+              - unique
+              - not_null
+          - name: '"seller_id"'
+            tests:
+              - unique
+              - not_null

@@ -1,0 +1,18 @@
+---
+version: 2
+sources:
+  - name: out.c-test-valut
+    freshness:
+      warn_after:
+        count: 1
+        period: day
+    database: '{{ env_var("DBT_KBC_DEV_DATABASE") }}'
+    schema: out.c-test-valut
+    loaded_at_field: '"_timestamp"'
+    tables:
+      - name: TEST
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []

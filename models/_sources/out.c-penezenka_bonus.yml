@@ -1,0 +1,18 @@
+---
+version: 2
+sources:
+  - name: out.c-penezenka_bonus
+    freshness:
+      warn_after:
+        count: 1
+        period: day
+    database: '{{ env_var("DBT_KBC_DEV_DATABASE") }}'
+    schema: out.c-penezenka_bonus
+    loaded_at_field: '"_timestamp"'
+    tables:
+      - name: penezenka_bonus
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []

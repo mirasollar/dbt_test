@@ -1,0 +1,24 @@
+---
+version: 2
+sources:
+  - name: in.c-attribution
+    freshness:
+      warn_after:
+        count: 1
+        period: day
+    database: '{{ env_var("DBT_KBC_DEV_DATABASE") }}'
+    schema: in.c-attribution
+    loaded_at_field: '"_timestamp"'
+    tables:
+      - name: attribution_sklik
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: attribution_wa
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []

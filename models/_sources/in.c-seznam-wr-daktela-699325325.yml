@@ -1,0 +1,26 @@
+---
+version: 2
+sources:
+  - name: in.c-seznam-wr-daktela-699325325
+    freshness:
+      warn_after:
+        count: 1
+        period: day
+    database: '{{ env_var("DBT_KBC_DEV_DATABASE") }}'
+    schema: in.c-seznam-wr-daktela-699325325
+    loaded_at_field: '"_timestamp"'
+    tables:
+      - name: logs_contacts_create
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns:
+          - name: '"datetime"'
+            tests:
+              - unique
+              - not_null
+          - name: '"name"'
+            tests:
+              - unique
+              - not_null

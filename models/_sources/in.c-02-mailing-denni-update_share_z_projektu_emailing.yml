@@ -1,0 +1,312 @@
+---
+version: 2
+sources:
+  - name: in.c-02-mailing-denni-update_share_z_projektu_emailing
+    freshness:
+      warn_after:
+        count: 1
+        period: day
+    database: '{{ env_var("DBT_KBC_DEV_2516_DATABASE") }}'
+    schema: out.c-02-mailing-denni-update
+    loaded_at_field: '"_timestamp"'
+    tables:
+      - name: cyklus_vystup
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: emaily_vse_historicky_kupi_pravidelny_data
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns:
+          - name: '"email"'
+            tests:
+              - unique
+              - not_null
+      - name: firmy_pravidelny_mailing_cast_1
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: firmy_pravidelny_mailing_cast_2
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: firmy_pravidelny_mailing_cast_3
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: firmy_pravidelny_mailing_cast_4
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: gooddata_vystup_sklik_kampane_bez_impresi
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns:
+          - name: '"datum_reportu"'
+            tests:
+              - unique
+              - not_null
+          - name: '"email_RUS"'
+            tests:
+              - unique
+              - not_null
+      - name: gooddata_vystup_sklik_nema_kampan
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns:
+          - name: '"datum_reportu"'
+            tests:
+              - unique
+              - not_null
+          - name: '"email_RUS"'
+            tests:
+              - unique
+              - not_null
+      - name: gooddata_vytup_sklik_nema_kampan_bez_vlastnika
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: mailkit_spravovani_klienti_bez_drtg_vystup
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: mailkit_spravovani_klienti_bez_rtg_vystup
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: mailkit_spravovani_klienti_os_bez_vs_vystup
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: mailkit_vystup_firmy_upsale
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: mailkit_vystup_firmy_upsell
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: mailkit_vystup_kupi_pravidelny
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: mailkit_vystup_mailing_VIP
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: mailkit_vystup_partnership_mailing_260
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: mailkit_vystup_sklik2_final
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: mailkit_vystup_sklik3_final
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: mailkit_vystup_sklik_final
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: mailkit_vystup_sklik_kampane_bez_impresi
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: mailkit_vystup_sklik_kampane_bez_impresi_klient
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: mailkit_vystup_sklik_kampane_bez_impresi_pro_klienty
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: mailkit_vystup_sklik_kampane_bez_impresi_pro_vlastniky
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: mailkit_vystup_sklik_nema_kampan
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: mailkit_vystup_sklik_nema_kampan_klient
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: mailkit_vystup_sklik_nema_kampan_pro_klienty
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: mailkit_vystup_sklik_nema_kampan_pro_vlastniky
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: mailkit_vystup_sklik_zbozi_emailing
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: mailkit_vystup_sklik_zbozi_emailing2
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: mailkit_vystup_sreality_tip_developersky_projekt_414
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: mailkit_vystup_zbozi_welcome_mail
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: obchod_sos_rus_cleaned
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: probehla_sos_penezenka_cleaned
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: relevantni_kontakty_sos
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: report_mailing_zbozi_sklik
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: rus_administered_cleaned
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: RUS_snadne_platby
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: sklik4_final
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: sklik5_final
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: sklik_notifikace_strategie_onk_259
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: sklik_notifikace_strategie_onk_259_historie
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns:
+          - name: '"pk"'
+            tests:
+              - unique
+              - not_null
+          - name: '"email"'
+            tests:
+              - unique
+              - not_null
+          - name: '"custom1"'
+            tests:
+              - unique
+              - not_null
+          - name: '"custom7"'
+            tests:
+              - unique
+              - not_null
+      - name: user_cleaned
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: zbozi_pravidelny_mailing_final
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []

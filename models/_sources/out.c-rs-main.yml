@@ -1,0 +1,824 @@
+---
+version: 2
+sources:
+  - name: out.c-rs-main
+    freshness:
+      warn_after:
+        count: 1
+        period: day
+    database: '{{ env_var("DBT_KBC_DEV_DATABASE") }}'
+    schema: out.c-rs-main
+    loaded_at_field: '"_timestamp"'
+    tables:
+      - name: administration_statistika
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: agency
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns:
+          - name: '"client_id"'
+            tests:
+              - unique
+              - not_null
+      - name: behavioral_week_stats
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns:
+          - name: '"zone_id"'
+            tests:
+              - unique
+              - not_null
+          - name: '"id_produktu"'
+            tests:
+              - unique
+              - not_null
+          - name: '"week"'
+            tests:
+              - unique
+              - not_null
+          - name: '"druh_cileni"'
+            tests:
+              - unique
+              - not_null
+          - name: '"zdroj_statistik"'
+            tests:
+              - unique
+              - not_null
+      - name: bi_plan_2020
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: bridge_rus_administrator
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: cilene_produkty
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: ciselnik_sbs_campaignproduktu
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: client_category
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns:
+          - name: '"client_id"'
+            tests:
+              - unique
+              - not_null
+      - name: client_category_kontrola
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns:
+          - name: '"client_id"'
+            tests:
+              - unique
+              - not_null
+      - name: client_category_kontrola_2
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns:
+          - name: '"client_id"'
+            tests:
+              - unique
+              - not_null
+      - name: client_duplicity_ic_legal_form
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: client_rus_administrator_type
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: debetni_kredit
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns:
+          - name: '"rus_id"'
+            tests:
+              - unique
+              - not_null
+      - name: dim_rus_administered
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: dim_rus_agency_client_id
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: dim_rus_compared
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: dim_sklik_administrator
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: dmp_out_report
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: drtg_navstevniku_seznamu
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns:
+          - name: '"date"'
+            tests:
+              - unique
+              - not_null
+          - name: '"userid"'
+            tests:
+              - unique
+              - not_null
+      - name: eshopove_reseni_agregace
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns:
+          - name: '"datum_snapshotu"'
+            tests:
+              - unique
+              - not_null
+          - name: '"eshopove_reseni_unique"'
+            tests:
+              - unique
+              - not_null
+      - name: fact_agentury_pilot
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: fact_agentury_pilot_2024_snapshots
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: fact_cross_device_conversions
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: fact_sklik_email
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: fact_sklik_lookalike
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: fact_sklik_rus_stats
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: fact_sklik_zajmy
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: fact_sklik_zajmy_2022
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: firmy_predikce
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: formular_potreb_excel
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: historie_komunikace
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns:
+          - name: '"fake_identifikator"'
+            tests:
+              - unique
+              - not_null
+      - name: keywords_kz_filtr
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: kontaktni_osoby
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns:
+          - name: '"datum"'
+            tests:
+              - unique
+              - not_null
+          - name: '"contact_person_id"'
+            tests:
+              - unique
+              - not_null
+          - name: '"client_id"'
+            tests:
+              - unique
+              - not_null
+      - name: kontaktni_osoby_daily_snapshot
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: kontaktni_osoby_zaloha
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns:
+          - name: '"datum"'
+            tests:
+              - unique
+              - not_null
+          - name: '"contact_person_id"'
+            tests:
+              - unique
+              - not_null
+          - name: '"client_id"'
+            tests:
+              - unique
+              - not_null
+      - name: kurzy
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: majitel_kampane
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: mic_ico
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns:
+          - name: '"ic"'
+            tests:
+              - unique
+              - not_null
+      - name: mix_ico
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: mobil_reve
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: onegar_ad_daily_stats
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns:
+          - name: '"date"'
+            tests:
+              - unique
+              - not_null
+          - name: '"placement_type"'
+            tests:
+              - unique
+              - not_null
+          - name: '"feedtag_id"'
+            tests:
+              - unique
+              - not_null
+          - name: '"ad_type"'
+            tests:
+              - unique
+              - not_null
+          - name: '"hw_id"'
+            tests:
+              - unique
+              - not_null
+          - name: '"userid"'
+            tests:
+              - unique
+              - not_null
+          - name: '"orderid"'
+            tests:
+              - unique
+              - not_null
+          - name: '"campaignid"'
+            tests:
+              - unique
+              - not_null
+          - name: '"groupid"'
+            tests:
+              - unique
+              - not_null
+          - name: '"adid"'
+            tests:
+              - unique
+              - not_null
+          - name: '"zoneid"'
+            tests:
+              - unique
+              - not_null
+      - name: partner
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: PL_NEW_2
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: postpaid_predikce
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: postpaid_predikce_20190625132354
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: postpaid_sklik
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns:
+          - name: '"date"'
+            tests:
+              - unique
+              - not_null
+          - name: '"client_rus"'
+            tests:
+              - unique
+              - not_null
+          - name: '"agency_rus"'
+            tests:
+              - unique
+              - not_null
+      - name: probehla_sos_penezenka
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: probehla_sos_penezenka_20240904100400_kontrola
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: proklikano_sreality_produkty
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: prumerny_zustatek_mesice
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns:
+          - name: '"rus_id"'
+            tests:
+              - unique
+              - not_null
+          - name: '"mesic"'
+            tests:
+              - unique
+              - not_null
+      - name: RETARGETING_ADVERTORIAL_FACT
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: rtb_deals
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: rtb_deals_ciselnik
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: rtb_deals_data
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: rtb_im_statistiky
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns:
+          - name: '"klic_4"'
+            tests:
+              - unique
+              - not_null
+      - name: rtb_pubmatc2
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: rus_administered
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: rus_administrator
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: rus_administrator_type
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: rus_administrator_vazba
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: sentisquare_antifraud
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: sentisquare_stitky
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: skaly_klientu_sklik_final
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: sklik_agentury
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: sklik_complete_by_date
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: sklik_complete_overview
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: sklik_prep_post
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: sklik_retargeting_list
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: sklik_retargeting_list_zaloha
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns:
+          - name: '"datum"'
+            tests:
+              - unique
+              - not_null
+          - name: '"rus"'
+            tests:
+              - unique
+              - not_null
+          - name: '"retargeting_list_id"'
+            tests:
+              - unique
+              - not_null
+      - name: sklik_rus_stats
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: sklik_userid
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns:
+          - name: '"date"'
+            tests:
+              - unique
+              - not_null
+          - name: '"placement_type"'
+            tests:
+              - unique
+              - not_null
+          - name: '"source_feed"'
+            tests:
+              - unique
+              - not_null
+          - name: '"ad_type"'
+            tests:
+              - unique
+              - not_null
+          - name: '"device_type"'
+            tests:
+              - unique
+              - not_null
+          - name: '"userid"'
+            tests:
+              - unique
+              - not_null
+      - name: sklik_zoneid
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns:
+          - name: '"date"'
+            tests:
+              - unique
+              - not_null
+          - name: '"placement_type"'
+            tests:
+              - unique
+              - not_null
+          - name: '"source_feed"'
+            tests:
+              - unique
+              - not_null
+          - name: '"ad_type"'
+            tests:
+              - unique
+              - not_null
+          - name: '"device_type"'
+            tests:
+              - unique
+              - not_null
+          - name: '"web_id"'
+            tests:
+              - unique
+              - not_null
+          - name: '"zone_id"'
+            tests:
+              - unique
+              - not_null
+      - name: sklik_zone_stats
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: sos-campaign
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns:
+          - name: '"campaign_id"'
+            tests:
+              - unique
+              - not_null
+      - name: sos-campaignproduct
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns:
+          - name: '"campaign_product_id"'
+            tests:
+              - unique
+              - not_null
+      - name: sos-client
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: sos-commission-user
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: sos-invoiceproduct
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns:
+          - name: '"invoice_product_id"'
+            tests:
+              - unique
+              - not_null
+      - name: sos-invoiceproduct_20201210111605
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns:
+          - name: '"invoice_product_id"'
+            tests:
+              - unique
+              - not_null
+      - name: sos-product
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns:
+          - name: '"product_id"'
+            tests:
+              - unique
+              - not_null
+      - name: sos-user
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: sos_sales_plan
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: sreality_franchis
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: tbl_plan_value
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: uroven_klienta
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: videoprostor_stary_advert
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: zajmy
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns:
+          - name: '"date"'
+            tests:
+              - unique
+              - not_null
+          - name: '"foi_id"'
+            tests:
+              - unique
+              - not_null
+          - name: '"user_id"'
+            tests:
+              - unique
+              - not_null
+          - name: '"ad_type_id"'
+            tests:
+              - unique
+              - not_null
+          - name: '"inventory"'
+            tests:
+              - unique
+              - not_null
+          - name: '"age_id"'
+            tests:
+              - unique
+              - not_null
+          - name: '"gender"'
+            tests:
+              - unique
+              - not_null
+          - name: '"browser_id"'
+            tests:
+              - unique
+              - not_null
+          - name: '"hw_id"'
+            tests:
+              - unique
+              - not_null
+          - name: '"os_id"'
+            tests:
+              - unique
+              - not_null
+      - name: zone_ciselnik
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns:
+          - name: '"zone_id"'
+            tests:
+              - unique
+              - not_null

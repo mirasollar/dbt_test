@@ -1,0 +1,22 @@
+---
+version: 2
+sources:
+  - name: in.c-Kurzy
+    freshness:
+      warn_after:
+        count: 1
+        period: day
+    database: '{{ env_var("DBT_KBC_DEV_78_DATABASE") }}'
+    schema: in.c-rs-DWH_Seznam
+    loaded_at_field: '"_timestamp"'
+    tables:
+      - name: ostatni-ostatni-rtb_kurzy
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns:
+          - name: '"Mesic"'
+            tests:
+              - unique
+              - not_null

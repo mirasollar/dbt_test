@@ -1,0 +1,72 @@
+---
+version: 2
+sources:
+  - name: out.c-sluzby_revenues
+    freshness:
+      warn_after:
+        count: 1
+        period: day
+    database: '{{ env_var("DBT_KBC_DEV_DATABASE") }}'
+    schema: out.c-sluzby_revenues
+    loaded_at_field: '"_timestamp"'
+    tables:
+      - name: banners_services_revenue
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: database_services_advertisement
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: database_services_clients
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: database_services_revenue
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: instream_services
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns:
+          - name: '"date"'
+            tests:
+              - unique
+              - not_null
+          - name: '"commercial_service"'
+            tests:
+              - unique
+              - not_null
+          - name: '"is_szn_web"'
+            tests:
+              - unique
+              - not_null
+      - name: programmatic_services_revenue
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: reklama_services_revenue
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: reklama_services_revenue_check
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []

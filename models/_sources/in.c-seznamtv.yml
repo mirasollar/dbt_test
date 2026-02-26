@@ -1,0 +1,96 @@
+---
+version: 2
+sources:
+  - name: in.c-seznamtv
+    freshness:
+      warn_after:
+        count: 1
+        period: day
+    database: '{{ env_var("DBT_KBC_DEV_DATABASE") }}'
+    schema: in.c-seznamtv
+    loaded_at_field: '"_timestamp"'
+    tables:
+      - name: ATO_po_dnech
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: ATO_po_hodinach
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: ATO_po_mesicich
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: ATO_po_tydnech
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: CRA_TV_data_manualni_vstup
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: CRA_TV_data_manualni_vstup_all
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: CRA_TV_data_manualni_vstup_Ocko
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: CRA_TV_data_manualni_vstup_Ocko_star
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: data_tv_nej_cz_manual_18_10_2021
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: korekce_TV_stanic
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: kuki-viewingstats
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: kuki_live
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: kuki_timeshift
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: sledovanost
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []

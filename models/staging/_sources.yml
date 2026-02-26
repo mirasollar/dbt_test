@@ -1,0 +1,11 @@
+version: 2
+
+sources:
+  - name: keboola
+    description: Tables from Keboola Storage loaded into workspace
+    schema: "{{ env_var('DBT_KBC_DEV_SCHEMA') }}"
+    tables:
+      - name: fake_client
+        description: Raw client data from fake extractor
+      - name: fake_revenue
+        description: Raw revenue transactions from fake extractor

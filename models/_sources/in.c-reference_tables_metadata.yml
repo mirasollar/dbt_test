@@ -1,0 +1,98 @@
+---
+version: 2
+sources:
+  - name: in.c-reference_tables_metadata
+    freshness:
+      warn_after:
+        count: 1
+        period: day
+    database: '{{ env_var("DBT_KBC_DEV_DATABASE") }}'
+    schema: in.c-reference_tables_metadata
+    loaded_at_field: '"_timestamp"'
+    tables:
+      - name: passwords_mso_dev_792090537
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: passwords_mso_dev_839334747
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: passwords_rtb_reference_tables_741376305
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: settings_mso_dev_792090537
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns:
+          - name: '"table_id"'
+            tests:
+              - unique
+              - not_null
+      - name: settings_reference_tables_agentury_partnership_814556442
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns:
+          - name: '"table_id"'
+            tests:
+              - unique
+              - not_null
+      - name: settings_reference_tables_dmp_839814601
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns:
+          - name: '"table_id"'
+            tests:
+              - unique
+              - not_null
+      - name: settings_reference_tables_firmy_842481609
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns:
+          - name: '"table_id"'
+            tests:
+              - unique
+              - not_null
+      - name: settings_rtb_reference_tables_741376305
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns:
+          - name: '"table_id"'
+            tests:
+              - unique
+              - not_null
+      - name: snapshots_mso_dev_792090537
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: snapshots_mso_dev_839334747
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: snapshots_rtb_reference_tables_741376305
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []

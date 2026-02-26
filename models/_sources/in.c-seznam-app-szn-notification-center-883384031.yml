@@ -1,0 +1,34 @@
+---
+version: 2
+sources:
+  - name: in.c-seznam-app-szn-notification-center-883384031
+    freshness:
+      warn_after:
+        count: 1
+        period: day
+    database: '{{ env_var("DBT_KBC_DEV_DATABASE") }}'
+    schema: in.c-seznam-app-szn-notification-center-883384031
+    loaded_at_field: '"_timestamp"'
+    tables:
+      - name: notification_center_processed
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns:
+          - name: '"timestamp_utc"'
+            tests:
+              - unique
+              - not_null
+          - name: '"rus_id"'
+            tests:
+              - unique
+              - not_null
+          - name: '"opaque_id"'
+            tests:
+              - unique
+              - not_null
+          - name: '"result_id"'
+            tests:
+              - unique
+              - not_null

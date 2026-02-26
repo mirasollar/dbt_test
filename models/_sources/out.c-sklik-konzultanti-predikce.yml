@@ -1,0 +1,36 @@
+---
+version: 2
+sources:
+  - name: out.c-sklik-konzultanti-predikce
+    freshness:
+      warn_after:
+        count: 1
+        period: day
+    database: '{{ env_var("DBT_KBC_DEV_DATABASE") }}'
+    schema: out.c-sklik-konzultanti-predikce
+    loaded_at_field: '"_timestamp"'
+    tables:
+      - name: Sklik_predikce_rus_report_2
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: Sklik_predikce_rus_report_final
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: Sklik_realita_rus_predikce_report_2
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: Sklik_realita_rus_predikce_report_final
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []

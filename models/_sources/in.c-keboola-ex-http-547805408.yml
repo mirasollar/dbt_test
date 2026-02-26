@@ -1,0 +1,18 @@
+---
+version: 2
+sources:
+  - name: in.c-keboola-ex-http-547805408
+    freshness:
+      warn_after:
+        count: 1
+        period: day
+    database: '{{ env_var("DBT_KBC_DEV_DATABASE") }}'
+    schema: in.c-keboola-ex-http-547805408
+    loaded_at_field: '"_timestamp"'
+    tables:
+      - name: test_zbozi_2
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []

@@ -1,0 +1,24 @@
+---
+version: 2
+sources:
+  - name: out.c-client-doplnujici-data-pro-kartu-klienta
+    freshness:
+      warn_after:
+        count: 1
+        period: day
+    database: '{{ env_var("DBT_KBC_DEV_DATABASE") }}'
+    schema: out.c-client-doplnujici-data-pro-kartu-klienta
+    loaded_at_field: '"_timestamp"'
+    tables:
+      - name: firmy_statistiky
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: zbozi_statistiky
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []

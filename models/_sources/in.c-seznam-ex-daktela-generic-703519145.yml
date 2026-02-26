@@ -1,0 +1,22 @@
+---
+version: 2
+sources:
+  - name: in.c-seznam-ex-daktela-generic-703519145
+    freshness:
+      warn_after:
+        count: 1
+        period: day
+    database: '{{ env_var("DBT_KBC_DEV_DATABASE") }}'
+    schema: in.c-seznam-ex-daktela-generic-703519145
+    loaded_at_field: '"_timestamp"'
+    tables:
+      - name: accounts
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns:
+          - name: '"name"'
+            tests:
+              - unique
+              - not_null

@@ -1,0 +1,24 @@
+---
+version: 2
+sources:
+  - name: out.c-formular-potreb-novy-zaklad
+    freshness:
+      warn_after:
+        count: 1
+        period: day
+    database: '{{ env_var("DBT_KBC_DEV_DATABASE") }}'
+    schema: out.c-formular-potreb-novy-zaklad
+    loaded_at_field: '"_timestamp"'
+    tables:
+      - name: aktivity_sos_airflow_json
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: marketing_skills_do_sloupcu_zaklad
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []

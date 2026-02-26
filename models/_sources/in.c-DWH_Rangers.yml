@@ -1,0 +1,42 @@
+---
+version: 2
+sources:
+  - name: in.c-DWH_Rangers
+    freshness:
+      warn_after:
+        count: 1
+        period: day
+    database: '{{ env_var("DBT_KBC_DEV_DATABASE") }}'
+    schema: in.c-DWH_Rangers
+    loaded_at_field: '"_timestamp"'
+    tables:
+      - name: report_ask
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: report_imper
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: report_reklamace
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: report_sums
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: zbozi_emaily
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []

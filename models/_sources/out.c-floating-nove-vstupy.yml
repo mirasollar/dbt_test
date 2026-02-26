@@ -1,0 +1,18 @@
+---
+version: 2
+sources:
+  - name: out.c-floating-nove-vstupy
+    freshness:
+      warn_after:
+        count: 1
+        period: day
+    database: '{{ env_var("DBT_KBC_DEV_DATABASE") }}'
+    schema: out.c-floating-nove-vstupy
+    loaded_at_field: '"_timestamp"'
+    tables:
+      - name: FLOATING_2023_09
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []

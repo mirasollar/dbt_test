@@ -1,0 +1,30 @@
+---
+version: 2
+sources:
+  - name: out.c-gd-mufs
+    freshness:
+      warn_after:
+        count: 1
+        period: day
+    database: '{{ env_var("DBT_KBC_DEV_DATABASE") }}'
+    schema: out.c-gd-mufs
+    loaded_at_field: '"_timestamp"'
+    tables:
+      - name: muf_test
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: users-mufs-hr_a_neznam
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: users-mufs-manual
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []

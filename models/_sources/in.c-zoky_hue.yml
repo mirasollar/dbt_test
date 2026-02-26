@@ -1,0 +1,180 @@
+---
+version: 2
+sources:
+  - name: in.c-zoky_hue
+    freshness:
+      warn_after:
+        count: 1
+        period: day
+    database: '{{ env_var("DBT_KBC_DEV_DATABASE") }}'
+    schema: in.c-zoky_hue
+    loaded_at_field: '"_timestamp"'
+    tables:
+      - name: rtg_ciselnik_2018_11
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns:
+          - name: '"id_rtg_seznamu"'
+            tests:
+              - unique
+              - not_null
+      - name: userid_rus_2018_11
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns:
+          - name: '"userid"'
+            tests:
+              - unique
+              - not_null
+          - name: '"email"'
+            tests:
+              - unique
+              - not_null
+      - name: zajem_2018_10
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: zajmy_celkem
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns:
+          - name: '"gsidinterestid"'
+            tests:
+              - unique
+              - not_null
+          - name: '"month"'
+            tests:
+              - unique
+              - not_null
+          - name: '"year"'
+            tests:
+              - unique
+              - not_null
+      - name: zajmy_celkem_uzivatel_vstup
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns:
+          - name: '"month"'
+            tests:
+              - unique
+              - not_null
+          - name: '"year"'
+            tests:
+              - unique
+              - not_null
+          - name: '"userid"'
+            tests:
+              - unique
+              - not_null
+          - name: '"typ"'
+            tests:
+              - unique
+              - not_null
+          - name: '"gsidinterestid"'
+            tests:
+              - unique
+              - not_null
+      - name: zajmy_ciselnik_2018_11_27
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns:
+          - name: '"gsidinterestid"'
+            tests:
+              - unique
+              - not_null
+          - name: '"zajem"'
+            tests:
+              - unique
+              - not_null
+      - name: zajmy_cpi
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns:
+          - name: '"gsidinterestid"'
+            tests:
+              - unique
+              - not_null
+          - name: '"month"'
+            tests:
+              - unique
+              - not_null
+          - name: '"year"'
+            tests:
+              - unique
+              - not_null
+      - name: zajmy_historie
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: zoky_2018_10
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: zoky_celkem
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns:
+          - name: '"rtglistid"'
+            tests:
+              - unique
+              - not_null
+          - name: '"userid"'
+            tests:
+              - unique
+              - not_null
+          - name: '"month"'
+            tests:
+              - unique
+              - not_null
+          - name: '"year"'
+            tests:
+              - unique
+              - not_null
+      - name: zoky_cpi
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns:
+          - name: '"rtglistid"'
+            tests:
+              - unique
+              - not_null
+          - name: '"userid"'
+            tests:
+              - unique
+              - not_null
+          - name: '"year"'
+            tests:
+              - unique
+              - not_null
+          - name: '"month"'
+            tests:
+              - unique
+              - not_null
+      - name: zoky_historie
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []

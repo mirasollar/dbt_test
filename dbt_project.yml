@@ -1,0 +1,7 @@
+name: mso_dev_dbt_project
+version: '1.0.0'
+config-version: 2
+
+profile: 'user'
+
+model-paths: ["models"]

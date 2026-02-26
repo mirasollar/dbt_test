@@ -1,0 +1,18 @@
+---
+version: 2
+sources:
+  - name: out.c-mezery_sklik
+    freshness:
+      warn_after:
+        count: 1
+        period: day
+    database: '{{ env_var("DBT_KBC_DEV_DATABASE") }}'
+    schema: out.c-mezery_sklik
+    loaded_at_field: '"_timestamp"'
+    tables:
+      - name: agregace_sklik_mezer_rus
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []

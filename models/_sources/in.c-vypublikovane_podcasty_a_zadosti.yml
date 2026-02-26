@@ -1,0 +1,24 @@
+---
+version: 2
+sources:
+  - name: in.c-vypublikovane_podcasty_a_zadosti
+    freshness:
+      warn_after:
+        count: 1
+        period: day
+    database: '{{ env_var("DBT_KBC_DEV_78_DATABASE") }}'
+    schema: in.c-rs-DWH_Seznam
+    loaded_at_field: '"_timestamp"'
+    tables:
+      - name: vypublikovane_podcasty
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: zadosti_pridat_podcast
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []

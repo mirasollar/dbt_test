@@ -1,0 +1,70 @@
+---
+version: 2
+sources:
+  - name: in.c-seznam-ex-index-exchange-01jzmznqpjxeeh2je3wnk8wmfz
+    freshness:
+      warn_after:
+        count: 1
+        period: day
+    database: '{{ env_var("DBT_KBC_DEV_DATABASE") }}'
+    schema: in.c-seznam-ex-index-exchange-01jzmznqpjxeeh2je3wnk8wmfz
+    loaded_at_field: '"_timestamp"'
+    tables:
+      - name: api_indexexchange_report
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns:
+          - name: '"day"'
+            tests:
+              - unique
+              - not_null
+          - name: '"brand_name"'
+            tests:
+              - unique
+              - not_null
+          - name: '"brand_id"'
+            tests:
+              - unique
+              - not_null
+          - name: '"buyer_name"'
+            tests:
+              - unique
+              - not_null
+          - name: '"trading_desk_id"'
+            tests:
+              - unique
+              - not_null
+          - name: '"dsp_name"'
+            tests:
+              - unique
+              - not_null
+          - name: '"dsp_id"'
+            tests:
+              - unique
+              - not_null
+          - name: '"deal_id"'
+            tests:
+              - unique
+              - not_null
+          - name: '"deal_name"'
+            tests:
+              - unique
+              - not_null
+          - name: '"domain"'
+            tests:
+              - unique
+              - not_null
+          - name: '"site_id"'
+            tests:
+              - unique
+              - not_null
+          - name: '"site_name"'
+            tests:
+              - unique
+              - not_null
+          - name: '"size"'
+            tests:
+              - unique
+              - not_null

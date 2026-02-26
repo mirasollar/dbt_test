@@ -1,0 +1,54 @@
+---
+version: 2
+sources:
+  - name: out.c-MSO_ADHOC_dummy_data
+    freshness:
+      warn_after:
+        count: 1
+        period: day
+    database: '{{ env_var("DBT_KBC_DEV_DATABASE") }}'
+    schema: out.c-MSO_ADHOC_dummy_data
+    loaded_at_field: '"_timestamp"'
+    tables:
+      - name: aaa_customer
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: aab_customer
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: dim_client
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: dim_employee
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: dim_team
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: pubmatic_distinct_row_count
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: rtb_appnexus_distinct_row_count
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []

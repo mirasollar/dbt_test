@@ -1,0 +1,96 @@
+---
+version: 2
+sources:
+  - name: in.c-esnerda-ex-mailkit-26143354
+    freshness:
+      warn_after:
+        count: 1
+        period: day
+    database: '{{ env_var("DBT_KBC_DEV_DATABASE") }}'
+    schema: in.c-esnerda-ex-mailkit-26143354
+    loaded_at_field: '"_timestamp"'
+    tables:
+      - name: bounces
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: campaignReports
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: campaigns
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: feedback
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: links
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: linksVisitors
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: messageReport
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: raw_bounces
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns:
+          - name: '"ID_UNDELIVERED_LOG"'
+            tests:
+              - unique
+              - not_null
+      - name: raw_messages
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns:
+          - name: '"ID_send_message"'
+            tests:
+              - unique
+              - not_null
+      - name: raw_responses
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns:
+          - name: '"ID_log"'
+            tests:
+              - unique
+              - not_null
+      - name: recipients
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: summaryReport
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []

@@ -1,0 +1,18 @@
+---
+version: 2
+sources:
+  - name: out.c-vystupni-sestava-simple-forecast
+    freshness:
+      warn_after:
+        count: 1
+        period: day
+    database: '{{ env_var("DBT_KBC_DEV_DATABASE") }}'
+    schema: out.c-vystupni-sestava-simple-forecast
+    loaded_at_field: '"_timestamp"'
+    tables:
+      - name: vystup_historie_vcetne_prefakturace
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []

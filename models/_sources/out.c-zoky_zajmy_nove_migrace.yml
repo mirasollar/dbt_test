@@ -1,0 +1,64 @@
+---
+version: 2
+sources:
+  - name: out.c-zoky_zajmy_nove_migrace
+    freshness:
+      warn_after:
+        count: 1
+        period: day
+    database: '{{ env_var("DBT_KBC_DEV_DATABASE") }}'
+    schema: out.c-zoky_zajmy_nove_migrace
+    loaded_at_field: '"_timestamp"'
+    tables:
+      - name: ZAJMY_VYSTUP
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns:
+          - name: '"DT"'
+            tests:
+              - unique
+              - not_null
+          - name: '"FOI_ID"'
+            tests:
+              - unique
+              - not_null
+          - name: '"ZAJEM_NAZEV"'
+            tests:
+              - unique
+              - not_null
+          - name: '"USER_ID"'
+            tests:
+              - unique
+              - not_null
+          - name: '"RUS_USER_ID"'
+            tests:
+              - unique
+              - not_null
+      - name: ZOKY_VYSTUP
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns:
+          - name: '"DT"'
+            tests:
+              - unique
+              - not_null
+          - name: '"RETARGETING_LIST_ID"'
+            tests:
+              - unique
+              - not_null
+          - name: '"ZOK_NAZEV"'
+            tests:
+              - unique
+              - not_null
+          - name: '"USER_ID"'
+            tests:
+              - unique
+              - not_null
+          - name: '"RUS_USER_ID"'
+            tests:
+              - unique
+              - not_null

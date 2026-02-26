@@ -1,0 +1,18 @@
+version: 2
+
+models:
+  - name: rpt_monthly_revenue
+    description: Monthly revenue aggregated by client with full details
+    columns:
+      - name: month
+        description: First day of the month
+        tests:
+          - not_null
+      - name: client_id
+        description: Client identifier
+        tests:
+          - not_null
+      - name: total_revenue
+        description: Sum of all revenue for the month
+        tests:
+          - not_null

@@ -1,0 +1,18 @@
+---
+version: 2
+sources:
+  - name: in.c-mapy_premium
+    freshness:
+      warn_after:
+        count: 1
+        period: day
+    database: '{{ env_var("DBT_KBC_DEV_78_DATABASE") }}'
+    schema: in.c-keboola-ex-onedrive-696676183
+    loaded_at_field: '"_timestamp"'
+    tables:
+      - name: Mapy_Premium
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []

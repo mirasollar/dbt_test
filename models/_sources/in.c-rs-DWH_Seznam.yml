@@ -1,0 +1,1768 @@
+---
+version: 2
+sources:
+  - name: in.c-rs-DWH_Seznam
+    freshness:
+      warn_after:
+        count: 1
+        period: day
+    database: '{{ env_var("DBT_KBC_DEV_DATABASE") }}'
+    schema: in.c-rs-DWH_Seznam
+    loaded_at_field: '"_timestamp"'
+    tables:
+      - name: agency_buyer_appnexus
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: agency_buyer_appnexus_DEV
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: agency_buyer_appnexus_New
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: agency_buyer_pubmatic
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: agency_dmp
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: agentura_borgis
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: agentura_radio
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: appnexus_buyer_to_dsp
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: app_placement_sos
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: branding_remap
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: buyer_segment_performance
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns:
+          - name: '"day"'
+            tests:
+              - unique
+              - not_null
+          - name: '"buying_currency"'
+            tests:
+              - unique
+              - not_null
+          - name: '"advertiser_id"'
+            tests:
+              - unique
+              - not_null
+          - name: '"advertiser_name"'
+            tests:
+              - unique
+              - not_null
+          - name: '"campaign_id"'
+            tests:
+              - unique
+              - not_null
+          - name: '"campaign_name"'
+            tests:
+              - unique
+              - not_null
+          - name: '"insertion_order_id"'
+            tests:
+              - unique
+              - not_null
+          - name: '"insertion_order_name"'
+            tests:
+              - unique
+              - not_null
+          - name: '"line_item_id"'
+            tests:
+              - unique
+              - not_null
+          - name: '"line_item_name"'
+            tests:
+              - unique
+              - not_null
+          - name: '"segment_id"'
+            tests:
+              - unique
+              - not_null
+          - name: '"segment_name"'
+            tests:
+              - unique
+              - not_null
+      - name: campaign_product_sklik
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: cenovy_skok
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: certifikace_agentur
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: cileni_nadkategorie
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: cileni_parovani
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: ciselnik_video
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: ciselnik_zoky
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns:
+          - name: '"id_rtg_seznamu"'
+            tests:
+              - unique
+              - not_null
+      - name: client_connection_tag
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: client_connection_tags
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: client_rus_administrator
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: client_rus_administrator_type
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: client_user_ownership_snapshot_last_month
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: client_vertikala
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: deal2segmentid
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: dochazka_absence
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: dochazka_attendance
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: dochazka_attendanceevent
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: dochazka_monthattendance
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: dochazka_overtimelog
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: dochazka_sensor
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: domain_vertikala
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: economic_activity
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: firmy_mailing_feedback
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: foi_nadkategorie
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: gd_temp_access
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: h_fakturace_szn
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: h_majetek_holding_plan
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: h_majetek_holding_skutecnost
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: h_naklady_dcerinky
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: h_naklady_szn
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: h_plan_fakturace_kanaly_szn
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: h_plan_fakturace_zakazky_szn
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: h_produkty_szn
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: h_stavy_uctu_holding
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: h_strediska_szn
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: h_strediskove_pl_poradi_2020_szn
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: h_strediskove_pl_poradi_2021_szn
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: h_strediskove_pl_szn
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: h_uzle_uctu_szn
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: h_vynosy_dcerinky
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: h_zakazkove_pl_szn
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: importni_klic
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: informace_o_platbach_kontrola
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: market
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: marketing_prijate_faktury
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: network_analytics
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns:
+          - name: '"day"'
+            tests:
+              - unique
+              - not_null
+          - name: '"buying_currency"'
+            tests:
+              - unique
+              - not_null
+          - name: '"advertiser_id"'
+            tests:
+              - unique
+              - not_null
+          - name: '"advertiser_name"'
+            tests:
+              - unique
+              - not_null
+          - name: '"campaign_id"'
+            tests:
+              - unique
+              - not_null
+          - name: '"campaign_name"'
+            tests:
+              - unique
+              - not_null
+          - name: '"insertion_order_id"'
+            tests:
+              - unique
+              - not_null
+          - name: '"insertion_order_name"'
+            tests:
+              - unique
+              - not_null
+          - name: '"line_item_id"'
+            tests:
+              - unique
+              - not_null
+          - name: '"line_item_name"'
+            tests:
+              - unique
+              - not_null
+          - name: '"supply_type"'
+            tests:
+              - unique
+              - not_null
+          - name: '"creative_id"'
+            tests:
+              - unique
+              - not_null
+          - name: '"creative_name"'
+            tests:
+              - unique
+              - not_null
+          - name: '"size"'
+            tests:
+              - unique
+              - not_null
+          - name: '"split_id"'
+            tests:
+              - unique
+              - not_null
+          - name: '"split_name"'
+            tests:
+              - unique
+              - not_null
+          - name: '"placement_id"'
+            tests:
+              - unique
+              - not_null
+          - name: '"placement_name"'
+            tests:
+              - unique
+              - not_null
+          - name: '"deal_id"'
+            tests:
+              - unique
+              - not_null
+          - name: '"deal_name"'
+            tests:
+              - unique
+              - not_null
+          - name: '"media_type"'
+            tests:
+              - unique
+              - not_null
+          - name: '"media_type_id"'
+            tests:
+              - unique
+              - not_null
+          - name: '"publisher_name"'
+            tests:
+              - unique
+              - not_null
+      - name: network_attributed_conversions
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns:
+          - name: '"day"'
+            tests:
+              - unique
+              - not_null
+          - name: '"advertiser_id"'
+            tests:
+              - unique
+              - not_null
+          - name: '"advertiser_name"'
+            tests:
+              - unique
+              - not_null
+          - name: '"campaign_id"'
+            tests:
+              - unique
+              - not_null
+          - name: '"campaign_name"'
+            tests:
+              - unique
+              - not_null
+          - name: '"line_item_id"'
+            tests:
+              - unique
+              - not_null
+          - name: '"line_item_name"'
+            tests:
+              - unique
+              - not_null
+          - name: '"pixel_id"'
+            tests:
+              - unique
+              - not_null
+          - name: '"pixel_name"'
+            tests:
+              - unique
+              - not_null
+          - name: '"post_click_or_post_view_conv"'
+            tests:
+              - unique
+              - not_null
+          - name: '"auction_id"'
+            tests:
+              - unique
+              - not_null
+          - name: '"datetime"'
+            tests:
+              - unique
+              - not_null
+          - name: '"imp_time"'
+            tests:
+              - unique
+              - not_null
+      - name: network_site_domain_performance
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns:
+          - name: '"day"'
+            tests:
+              - unique
+              - not_null
+          - name: '"buying_currency"'
+            tests:
+              - unique
+              - not_null
+          - name: '"advertiser_id"'
+            tests:
+              - unique
+              - not_null
+          - name: '"advertiser_name"'
+            tests:
+              - unique
+              - not_null
+          - name: '"campaign_id"'
+            tests:
+              - unique
+              - not_null
+          - name: '"campaign_name"'
+            tests:
+              - unique
+              - not_null
+          - name: '"insertion_order_id"'
+            tests:
+              - unique
+              - not_null
+          - name: '"insertion_order_name"'
+            tests:
+              - unique
+              - not_null
+          - name: '"line_item_id"'
+            tests:
+              - unique
+              - not_null
+          - name: '"line_item_name"'
+            tests:
+              - unique
+              - not_null
+          - name: '"site_domain"'
+            tests:
+              - unique
+              - not_null
+          - name: '"supply_type"'
+            tests:
+              - unique
+              - not_null
+      - name: obchod-advert-agegroup
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: obchod-advert-cilenareklama
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: obchod-advert-fieldofinterest
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns:
+          - name: '"field_of_interest_id"'
+            tests:
+              - unique
+              - not_null
+      - name: obchod-advert-obsazenost_reklamnich_pozic
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: obchod-advert-obsazenost_reklamnich_pozic_denne
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: obchod-advert-region
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns:
+          - name: '"region_id"'
+            tests:
+              - unique
+              - not_null
+      - name: obchod-advert-rtbpubmatic2
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: obchod-advert-rtbpubmatic2_20180722105433
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: obchod-advert-rtbpubmatic2_20180723105321
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: obchod-advert-siteofinterest
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: obchod-advert-zonestatweeklyagegroup
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: obchod-advert-zonestatweeklyfoi
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns:
+          - name: '"zone_id"'
+            tests:
+              - unique
+              - not_null
+          - name: '"week"'
+            tests:
+              - unique
+              - not_null
+          - name: '"field_of_interest_id"'
+            tests:
+              - unique
+              - not_null
+      - name: obchod-advert-zonestatweeklyregion
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: obchod-advert-zonestatweeklysection
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: obchod-advert-zonestatweeklysex
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: obchod-advert-zonestatweeklysexage
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: obchod-advert-zonestatweeklysoi
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: obchod-ask-aukce_mimo_region
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: obchod-ask-category
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: obchod-ask-financefirmy
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: obchod-ask-financefirmy_2
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: obchod-ask-premise
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: obchod-ask-premise_category
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: obchod-ask-premise_estimates
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: obchod-ask-premise_statistics
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: obchod-ask-premise_stats_30_days
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: obchod-penezenka-balance
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: obchod-penezenka-businessreport
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: obchod-penezenka-debetnirus
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: obchod-penezenka-debetnirus_test
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: obchod-penezenka-newbusinessreport
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: obchod-penezenka-newbusinessreport_test
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: obchod-penezenka-rus
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: obchod-penezenka-sjednoceni_penezenky
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: obchod-sos-activity
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: obchod-sos-activity_new
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: obchod-sos-activity_type
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: obchod-sos-advertcampaign
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: obchod-sos-campaign
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: obchod-sos-campaignproduct
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: obchod-sos-campaignproductadvert
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: obchod-sos-campaignproductrus
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: obchod-sos-campaign_product_special_offer
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: obchod-sos-client
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: obchod-sos-clientcommunication
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: obchod-sos-clientcommunicationcontactperson
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: obchod-sos-clientconnection
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: obchod-sos-clientconnectionname
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: obchod-sos-clientconnectiontype
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: obchod-sos-clientcontactperson
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: obchod-sos-clientcontactpersonemail
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: obchod-sos-clientregion
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: obchod-sos-clientrus
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: obchod-sos-clientuseradministrator
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: obchod-sos-clientuserrecommended
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: obchod-sos-event-escort
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: obchod-sos-event_client
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: obchod-sos-event_contact
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: obchod-sos-event_escort
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: obchod-sos-event_meeting_type
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: obchod-sos-event_new
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns:
+          - name: '"id"'
+            tests:
+              - unique
+              - not_null
+      - name: obchod-sos-event_status
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: obchod-sos-event_type
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: obchod-sos-invoice
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: obchod-sos-invoiceall
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: obchod-sos-invoiceproduct
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: obchod-sos-invoiceproductall
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: obchod-sos-invoice_type
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: obchod-sos-ownership
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: obchod-sos-product
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: obchod-sos-productadvert
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: obchod-sos-rus
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: obchod-sos-ruspenezenka
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: obchod-sos-ruspenezenkapocketcredit
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: obchod-sos-sales_plan_value
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: obchod-sos-special_offer
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: obchod-sos-user
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: obchod-wa-postpaidstats
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: ostatni-ostatni-ad_tag
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: ostatni-ostatni-appnexus_client
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: ostatni-ostatni-appnexus_new_client
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: ostatni-ostatni-appnexus_revenues
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: ostatni-ostatni-dmp_advertisers
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: ostatni-ostatni-dmp_advertisers_new
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: ostatni-ostatni-dmp_sos_doplneni
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: ostatni-ostatni-firmyoptimalizace
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: ostatni-ostatni-infolinka_ic
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: ostatni-ostatni-majetekplan
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: ostatni-ostatni-majetekskutecnost
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: ostatni-ostatni-mobil_reve
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: ostatni-ostatni-rtb_advertiser
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: ostatni-ostatni-rtb_kurzy
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns:
+          - name: '"Mesic"'
+            tests:
+              - unique
+              - not_null
+      - name: ostatni-ostatni-sklik_clients_konzultanti
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: ostatni-ostatni-sklik_clients_optimalizatori
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: ostatni-ostatni-sklik_clients_optimalizatori_standard
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: ostatni-ostatni-zakazkove_pl_2017_new
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: ostatni-ostatni-zakazkyciselnik
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: ostatni-rtb_custom_segment
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: ostatni-rtb_gam
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: ostatni-rtb_gam_klic
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: ostatni_DMP_1P_data
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: outstream_remapping
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: penezenka_2021
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: plany
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: plany_produkt
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: podcasty_content
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: premise_autotune
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: premise_email
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: premise_recenze_mapy
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: premise_rus_email
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: premise_tarify
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: prihlasovani_oauth_extreni
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: prilepky
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: pubmatic_dsp
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: radia_na_hp
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: radkova_inzerce
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: rekategorizace_klientu
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: rtb_agency_remap
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: rtb_appnexus_detaily
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns:
+          - name: '"day"'
+            tests:
+              - unique
+              - not_null
+          - name: '"publisher_id"'
+            tests:
+              - unique
+              - not_null
+          - name: '"placement_id"'
+            tests:
+              - unique
+              - not_null
+          - name: '"brand_id"'
+            tests:
+              - unique
+              - not_null
+          - name: '"size"'
+            tests:
+              - unique
+              - not_null
+          - name: '"mediatype_id"'
+            tests:
+              - unique
+              - not_null
+          - name: '"deal_id"'
+            tests:
+              - unique
+              - not_null
+          - name: '"buyer_member_id"'
+            tests:
+              - unique
+              - not_null
+          - name: '"bidder_id"'
+            tests:
+              - unique
+              - not_null
+          - name: '"curator_member_id"'
+            tests:
+              - unique
+              - not_null
+          - name: '"buyer_seat_code"'
+            tests:
+              - unique
+              - not_null
+      - name: rtb_console_revenue_check
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: rtb_deals
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: RTB_plan
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: RTB_plan_2022
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: rtb_pubmatic_3
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: rtb_pubmatic_deals
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns:
+          - name: '"date"'
+            tests:
+              - unique
+              - not_null
+          - name: '"dealId"'
+            tests:
+              - unique
+              - not_null
+          - name: '"advertiserDomain"'
+            tests:
+              - unique
+              - not_null
+      - name: rtb_pubmatic_deals_manual
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: rtb_pubmatis_deals2
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: rtb_xandr_brand_remap
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: sauto_client
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: sauto_inzeraty_formulare
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: sauto_navyseni_registraci
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: sauto_registrace
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: sauto_topovani
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: sauto_zrcadleni
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: segmentid2segmentname
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: seznam_division
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: seznam_employee
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: seznam_job
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: seznam_person
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: sklik_konzultanti
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: sklik_konzultanti_tym
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: sklik_konz_rus
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: sklik_optimalizator
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: sklik_stats_daily
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: sreality-companyrelationships
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: sreality-informace-platby
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: sreality-makleri
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: sreality-odeslane-formulare
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: sreality-tip-maklere-prodano
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: sreality-tip-maklere-volne-pozice
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: sreality-tip-regionu-prodano
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: sreality-tip-regionu-volne-pozice
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: sreality_odeslane_formulare_kontrola
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: TV_plany
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: ucetnictvi-helios-expensescontrolling
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: ucetnictvi-helios-helios_users
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: ucetnictvi-helios-invoicingcontrolling
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: ucetnictvi-helios-pilirezakazky
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: ucetnictvi-helios-plan_fakturace_kanaly
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: ucetnictvi-helios-plan_fakturace_zakazky
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: ucetnictvi-helios-pldlezakazekciselnik
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: ucetnictvi-helios-pl_zakazky_dataset
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: vypublikovane_podcasty
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: wallet_charging
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: weby_v_newsfeedu
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: zadosti_pridat_podcast
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: zajem_nadkategorie
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: zbozi-zbozi_admin
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: zbozi-zbozi_admin_rozsirene
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: zbozi_admin_rozsirene_ruses
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: zbozi_emaily
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: zbozi_konz_clientlist_rus
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: zbozi_konz_rus
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: zbozi_prokliky
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: zbozi_vlastnosti_provozoven
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: zek_marketing_agg_visits_v2
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: zek_marketing_clicks_v2
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: zek_marketing_visits_v2
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: zok_nadkategorie
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []

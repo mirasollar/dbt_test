@@ -1,0 +1,42 @@
+---
+version: 2
+sources:
+  - name: in.c-rtb
+    freshness:
+      warn_after:
+        count: 1
+        period: day
+    database: '{{ env_var("DBT_KBC_DEV_DATABASE") }}'
+    schema: in.c-rtb
+    loaded_at_field: '"_timestamp"'
+    tables:
+      - name: dmp_fix_07-11-07-21-2024
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: etoro_rtb_fix_07_2024
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: pubmatic_daily_stats
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: pubmatic_deals
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: rtb_etoro_fix_08_2024
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []

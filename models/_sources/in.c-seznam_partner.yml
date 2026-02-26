@@ -1,0 +1,30 @@
+---
+version: 2
+sources:
+  - name: in.c-seznam_partner
+    freshness:
+      warn_after:
+        count: 1
+        period: day
+    database: '{{ env_var("DBT_KBC_DEV_DATABASE") }}'
+    schema: in.c-seznam_partner
+    loaded_at_field: '"_timestamp"'
+    tables:
+      - name: commission_payment
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: commission_payment_process_status
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: sklik_partner_doporucovani_request
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []

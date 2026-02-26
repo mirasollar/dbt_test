@@ -1,0 +1,80 @@
+---
+version: 2
+sources:
+  - name: in.c-sklik_user_zone_stats
+    freshness:
+      warn_after:
+        count: 1
+        period: day
+    database: '{{ env_var("DBT_KBC_DEV_78_DATABASE") }}'
+    schema: out.c-sklik
+    loaded_at_field: '"_timestamp"'
+    tables:
+      - name: sklik_user_zone_stats
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns:
+          - name: '"date"'
+            tests:
+              - unique
+              - not_null
+          - name: '"placement_type_id"'
+            tests:
+              - unique
+              - not_null
+          - name: '"feedtag_id"'
+            tests:
+              - unique
+              - not_null
+          - name: '"ad_type_id"'
+            tests:
+              - unique
+              - not_null
+          - name: '"device_type_group_id"'
+            tests:
+              - unique
+              - not_null
+          - name: '"zone_id"'
+            tests:
+              - unique
+              - not_null
+          - name: '"rus_id"'
+            tests:
+              - unique
+              - not_null
+      - name: sklik_user_zone_stats_zaloha_alias
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns:
+          - name: '"date"'
+            tests:
+              - unique
+              - not_null
+          - name: '"zone_id"'
+            tests:
+              - unique
+              - not_null
+          - name: '"placement_type_id"'
+            tests:
+              - unique
+              - not_null
+          - name: '"feedtag_id"'
+            tests:
+              - unique
+              - not_null
+          - name: '"ad_type_id"'
+            tests:
+              - unique
+              - not_null
+          - name: '"device_type_group_id"'
+            tests:
+              - unique
+              - not_null
+          - name: '"rus_id"'
+            tests:
+              - unique
+              - not_null

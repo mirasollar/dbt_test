@@ -1,0 +1,46 @@
+---
+version: 2
+sources:
+  - name: out.c-l2_floating_invoice
+    freshness:
+      warn_after:
+        count: 1
+        period: day
+    database: '{{ env_var("DBT_KBC_DEV_DATABASE") }}'
+    schema: out.c-l2_floating_invoice
+    loaded_at_field: '"_timestamp"'
+    tables:
+      - name: FLOATING_INVOICE_WEB_SHARED
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: FLOATING_INVOICE_WEB_SHARED_LOG
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns:
+          - name: '"TIMESTAMP"'
+            tests:
+              - unique
+              - not_null
+      - name: L2_FLOATING_INVOICE_AMOUNT
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: L2_FLOATING_INVOICE_IMPRESSIONS
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: L2_FLOATING_INVOICE_TARGETED_CAMPAIGN
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []

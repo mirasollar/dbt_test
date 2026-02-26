@@ -1,0 +1,18 @@
+---
+version: 2
+sources:
+  - name: out.c-daktela-chybovy-log
+    freshness:
+      warn_after:
+        count: 1
+        period: day
+    database: '{{ env_var("DBT_KBC_DEV_DATABASE") }}'
+    schema: out.c-daktela-chybovy-log
+    loaded_at_field: '"_timestamp"'
+    tables:
+      - name: finalni_log_chyb_daktela
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []

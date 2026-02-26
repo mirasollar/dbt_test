@@ -1,0 +1,60 @@
+---
+version: 2
+sources:
+  - name: in.web-analytics-complete-articles
+    freshness:
+      warn_after:
+        count: 1
+        period: day
+    database: '{{ env_var("DBT_KBC_DEV_DATABASE") }}'
+    schema: in.web-analytics-complete-articles
+    loaded_at_field: '"_timestamp"'
+    tables:
+      - name: AUTOWEB
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: BLOGY
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: NOVINKY
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: PROZENY
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: SPORT
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: SUPER
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: XFEED
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: ZPRAVY
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []

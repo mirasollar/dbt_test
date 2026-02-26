@@ -1,0 +1,30 @@
+---
+version: 2
+sources:
+  - name: out.c-bara_cileni_castkyimprese
+    freshness:
+      warn_after:
+        count: 1
+        period: day
+    database: '{{ env_var("DBT_KBC_DEV_DATABASE") }}'
+    schema: out.c-bara_cileni_castkyimprese
+    loaded_at_field: '"_timestamp"'
+    tables:
+      - name: cileni_pohlavi
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: cileni_vek
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: cileni_zajmy
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []

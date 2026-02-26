@@ -1,0 +1,30 @@
+---
+version: 2
+sources:
+  - name: out.c-gooddata_agency_partnership
+    freshness:
+      warn_after:
+        count: 1
+        period: day
+    database: '{{ env_var("DBT_KBC_DEV_DATABASE") }}'
+    schema: out.c-gooddata_agency_partnership
+    loaded_at_field: '"_timestamp"'
+    tables:
+      - name: dim_client
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: fact_agency_partnership_py
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: fact_agentury_pilot
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []

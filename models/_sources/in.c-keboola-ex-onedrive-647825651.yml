@@ -1,0 +1,18 @@
+---
+version: 2
+sources:
+  - name: in.c-keboola-ex-onedrive-647825651
+    freshness:
+      warn_after:
+        count: 1
+        period: day
+    database: '{{ env_var("DBT_KBC_DEV_DATABASE") }}'
+    schema: in.c-keboola-ex-onedrive-647825651
+    loaded_at_field: '"_timestamp"'
+    tables:
+      - name: user_management_sreality_realman
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []

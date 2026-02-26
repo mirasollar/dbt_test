@@ -1,0 +1,246 @@
+---
+version: 2
+sources:
+  - name: in.c-Firmy_db
+    freshness:
+      warn_after:
+        count: 1
+        period: day
+    database: '{{ env_var("DBT_KBC_DEV_DATABASE") }}'
+    schema: in.c-Firmy_db
+    loaded_at_field: '"_timestamp"'
+    tables:
+      - name: firmy_auction_tariff
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: firmy_category
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns:
+          - name: '"category_id"'
+            tests:
+              - unique
+              - not_null
+      - name: firmy_cenovy_skok
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: firmy_encashing_history
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns:
+          - name: '"premise_id"'
+            tests:
+              - unique
+              - not_null
+          - name: '"category_id"'
+            tests:
+              - unique
+              - not_null
+          - name: '"date"'
+            tests:
+              - unique
+              - not_null
+      - name: firmy_finance_firmy_3
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: firmy_finance_firmy_3_sjednoceni
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: firmy_hpbox_trends
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: firmy_mailing_digest_photos
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns:
+          - name: '"date"'
+            tests:
+              - unique
+              - not_null
+          - name: '"rus_id"'
+            tests:
+              - unique
+              - not_null
+      - name: firmy_mailing_digest_reviews
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns:
+          - name: '"date"'
+            tests:
+              - unique
+              - not_null
+          - name: '"rus_id"'
+            tests:
+              - unique
+              - not_null
+      - name: firmy_mailing_feedback_2
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: firmy_market
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: firmy_obchod-ask-aukce_mimo_region
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns:
+          - name: '"premise_id"'
+            tests:
+              - unique
+              - not_null
+          - name: '"category_id"'
+            tests:
+              - unique
+              - not_null
+          - name: '"date"'
+            tests:
+              - unique
+              - not_null
+      - name: firmy_obchod-ask-aukce_mimo_region_sjednoceni
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: firmy_obchod-ask-premise_category
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: firmy_obchod-ask-premise_statistics
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: firmy_premise
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns:
+          - name: '"premise_id"'
+            tests:
+              - unique
+              - not_null
+      - name: firmy_premise_autotune
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: firmy_premise_email
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: firmy_premise_phone
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: firmy_premise_recenze_mapy
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: firmy_premise_rus_email
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: firmy_premise_tarify
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns:
+          - name: '"premise_id"'
+            tests:
+              - unique
+              - not_null
+      - name: firmy_premise_top_ranking
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: firmy_premise_vlastnosti
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: firmy_success_file
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns:
+          - name: '"last_successful_update_date"'
+            tests:
+              - unique
+              - not_null
+      - name: firmy_success_file_weekly
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: firmy_tarif_na_zkousku
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns:
+          - name: '"subject_id"'
+            tests:
+              - unique
+              - not_null
+      - name: review
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: rus_user
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []

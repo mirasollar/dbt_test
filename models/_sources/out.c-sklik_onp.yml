@@ -1,0 +1,18 @@
+---
+version: 2
+sources:
+  - name: out.c-sklik_onp
+    freshness:
+      warn_after:
+        count: 1
+        period: day
+    database: '{{ env_var("DBT_KBC_DEV_DATABASE") }}'
+    schema: out.c-sklik_onp
+    loaded_at_field: '"_timestamp"'
+    tables:
+      - name: onk_output_final
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []

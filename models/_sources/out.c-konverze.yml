@@ -1,0 +1,52 @@
+---
+version: 2
+sources:
+  - name: out.c-konverze
+    freshness:
+      warn_after:
+        count: 1
+        period: day
+    database: '{{ env_var("DBT_KBC_DEV_DATABASE") }}'
+    schema: out.c-konverze
+    loaded_at_field: '"_timestamp"'
+    tables:
+      - name: KONVERZE_RUS
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns:
+          - name: '"DT"'
+            tests:
+              - unique
+              - not_null
+          - name: '"USER_ID"'
+            tests:
+              - unique
+              - not_null
+          - name: '"RUS_ID"'
+            tests:
+              - unique
+              - not_null
+          - name: '"RUS"'
+            tests:
+              - unique
+              - not_null
+          - name: '"CAMPAIGN_ID"'
+            tests:
+              - unique
+              - not_null
+          - name: '"CAMPAIGN_TYPE"'
+            tests:
+              - unique
+              - not_null
+          - name: '"NETWORK"'
+            tests:
+              - unique
+              - not_null
+      - name: RUS_PNO
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []

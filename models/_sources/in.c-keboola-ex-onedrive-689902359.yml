@@ -1,0 +1,18 @@
+---
+version: 2
+sources:
+  - name: in.c-keboola-ex-onedrive-689902359
+    freshness:
+      warn_after:
+        count: 1
+        period: day
+    database: '{{ env_var("DBT_KBC_DEV_DATABASE") }}'
+    schema: in.c-keboola-ex-onedrive-689902359
+    loaded_at_field: '"_timestamp"'
+    tables:
+      - name: not_only_SeznamTV
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []

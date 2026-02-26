@@ -1,0 +1,36 @@
+---
+version: 2
+sources:
+  - name: in.c-askpk
+    freshness:
+      warn_after:
+        count: 1
+        period: day
+    database: '{{ env_var("DBT_KBC_DEV_DATABASE") }}'
+    schema: in.c-askpk
+    loaded_at_field: '"_timestamp"'
+    tables:
+      - name: orders_transakce
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: peneyenka_users_settings_puvodni
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: penezenka_users_settings
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: seznam_rusu_aspk
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []

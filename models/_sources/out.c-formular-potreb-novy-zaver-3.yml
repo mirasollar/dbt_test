@@ -1,0 +1,18 @@
+---
+version: 2
+sources:
+  - name: out.c-formular-potreb-novy-zaver-3
+    freshness:
+      warn_after:
+        count: 1
+        period: day
+    database: '{{ env_var("DBT_KBC_DEV_DATABASE") }}'
+    schema: out.c-formular-potreb-novy-zaver-3
+    loaded_at_field: '"_timestamp"'
+    tables:
+      - name: kontrolni_sestava
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []

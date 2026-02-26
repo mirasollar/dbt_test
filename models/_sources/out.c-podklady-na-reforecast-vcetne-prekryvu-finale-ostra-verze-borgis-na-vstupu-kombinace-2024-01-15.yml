@@ -1,0 +1,36 @@
+---
+version: 2
+sources:
+  - name: out.c-podklady-na-reforecast-vcetne-prekryvu-finale-ostra-verze-borgis-na-vstupu-kombinace-2024-01-15
+    freshness:
+      warn_after:
+        count: 1
+        period: day
+    database: '{{ env_var("DBT_KBC_DEV_DATABASE") }}'
+    schema: out.c-podklady-na-reforecast-vcetne-prekryvu-finale-ostra-verze-borgis-na-vstupu-kombinace-2024-01-15
+    loaded_at_field: '"_timestamp"'
+    tables:
+      - name: FINALNI_KONTINGENCNI_VYSTUP_PRO_EXCEL
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: KLIENT_MESIC_KARTEZ_FAKTURACE_EXPORT
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: PRO_PLANOVANI_NULOVANI_FAKTURACE_V_OBLASTI
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: SPOJENA_FAKTURACE
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []

@@ -1,0 +1,64 @@
+---
+version: 2
+sources:
+  - name: out.c-maximalni-zustatky-penezenka
+    freshness:
+      warn_after:
+        count: 1
+        period: day
+    database: '{{ env_var("DBT_KBC_DEV_DATABASE") }}'
+    schema: out.c-maximalni-zustatky-penezenka
+    loaded_at_field: '"_timestamp"'
+    tables:
+      - name: doplneny_maximalni_zustatek_kreditu
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns:
+          - name: '"RUS_ID"'
+            tests:
+              - unique
+              - not_null
+          - name: '"DATUM"'
+            tests:
+              - unique
+              - not_null
+      - name: doplneny_maximalni_zustatek_kreditu_pro_analyzu
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns:
+          - name: '"RUS_ID"'
+            tests:
+              - unique
+              - not_null
+          - name: '"DATUM"'
+            tests:
+              - unique
+              - not_null
+      - name: dopocitano
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: finalni_statistika
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: finalni_statistika_test_pro_napocet_statistiky
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: median_vystup_maximlani_zustatek_kreditu
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []

@@ -1,0 +1,30 @@
+---
+version: 2
+sources:
+  - name: out.c-petra-test
+    freshness:
+      warn_after:
+        count: 1
+        period: day
+    database: '{{ env_var("DBT_KBC_DEV_DATABASE") }}'
+    schema: out.c-petra-test
+    loaded_at_field: '"_timestamp"'
+    tables:
+      - name: FLSklik
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: Sklik_FL_Interka
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: Sklik_FL_Jitka
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []

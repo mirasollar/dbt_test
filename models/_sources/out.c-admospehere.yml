@@ -1,0 +1,18 @@
+---
+version: 2
+sources:
+  - name: out.c-admospehere
+    freshness:
+      warn_after:
+        count: 1
+        period: day
+    database: '{{ env_var("DBT_KBC_DEV_DATABASE") }}'
+    schema: out.c-admospehere
+    loaded_at_field: '"_timestamp"'
+    tables:
+      - name: admosphere_final
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []

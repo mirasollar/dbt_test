@@ -1,0 +1,18 @@
+---
+version: 2
+sources:
+  - name: out.c-ogar-onegar-stats
+    freshness:
+      warn_after:
+        count: 1
+        period: day
+    database: '{{ env_var("DBT_KBC_DEV_DATABASE") }}'
+    schema: out.c-ogar-onegar-stats
+    loaded_at_field: '"_timestamp"'
+    tables:
+      - name: ogar_onegar_stats_kpi
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []

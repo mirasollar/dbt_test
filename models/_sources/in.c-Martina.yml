@@ -1,0 +1,220 @@
+---
+version: 2
+sources:
+  - name: in.c-Martina
+    freshness:
+      warn_after:
+        count: 1
+        period: day
+    database: '{{ env_var("DBT_KBC_DEV_DATABASE") }}'
+    schema: in.c-Martina
+    loaded_at_field: '"_timestamp"'
+    tables:
+      - name: aukce_klic_premise_category
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: aukce_premise
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: aukce_sum_za_premisu
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: aukce_vcera
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: bannery_obsah
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: banner_id_obsah_komplet
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: banner_obsah
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: banner_spot
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: cileni_druha_cast
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: Cileni_prvni_cast
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: client_contact_address
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: clustery
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: clustery_II
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: contact_person_jmeno_pozice
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: contracts_biz
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns:
+          - name: '"ContractId"'
+            tests:
+              - unique
+              - not_null
+          - name: '"VersionId"'
+            tests:
+              - unique
+              - not_null
+          - name: '"SupplierIC"'
+            tests:
+              - unique
+              - not_null
+      - name: dary_sos
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: dary_sos_updateinput
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: dary_sreality
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: jmeno_pozice_contact_person
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: job_title
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: job_title_name
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: kategorie_staitstika
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns:
+          - name: '"kategorie"'
+            tests:
+              - unique
+              - not_null
+          - name: '"mesic"'
+            tests:
+              - unique
+              - not_null
+          - name: '"rok"'
+            tests:
+              - unique
+              - not_null
+      - name: listopad
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: phone_contact_person
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: prvni_datum
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: publishers_biz
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns:
+          - name: '"PublisherIC"'
+            tests:
+              - unique
+              - not_null
+      - name: rijen
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: sreality_update_input
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: xxxxxx_test
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: zari
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []

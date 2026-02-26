@@ -1,0 +1,122 @@
+---
+version: 2
+sources:
+  - name: in.analytics-zbozi
+    freshness:
+      warn_after:
+        count: 1
+        period: day
+    database: '{{ env_var("DBT_KBC_DEV_DATABASE") }}'
+    schema: in.analytics-zbozi
+    loaded_at_field: '"_timestamp"'
+    tables:
+      - name: ATTRIBUTION_SKLIK_ONEGAR
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: FEED_YIELD_REPORT
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: MANAZERSKY_REPORT_NAVSTEV
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: MANAZERSKY_REPORT_PROKLIKU_V3
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns:
+          - name: '"AB_TEST"'
+            tests:
+              - unique
+              - not_null
+          - name: '"DATUM"'
+            tests:
+              - unique
+              - not_null
+          - name: '"MERENI_HODNOTY_KONVERZI"'
+            tests:
+              - unique
+              - not_null
+          - name: '"MERENI_KONVERZI"'
+            tests:
+              - unique
+              - not_null
+          - name: '"PROVOZOVNA"'
+            tests:
+              - unique
+              - not_null
+          - name: '"TYP"'
+            tests:
+              - unique
+              - not_null
+          - name: '"WEB"'
+            tests:
+              - unique
+              - not_null
+          - name: '"ZARIZENI"'
+            tests:
+              - unique
+              - not_null
+          - name: '"ZDROJ_NAVSTEVY"'
+            tests:
+              - unique
+              - not_null
+      - name: MANAZERSKY_REPORT_PROKLIKU_V4
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns:
+          - name: '"AB_TEST"'
+            tests:
+              - unique
+              - not_null
+          - name: '"BIDDING"'
+            tests:
+              - unique
+              - not_null
+          - name: '"DATUM"'
+            tests:
+              - unique
+              - not_null
+          - name: '"MERENI_HODNOTY_KONVERZI"'
+            tests:
+              - unique
+              - not_null
+          - name: '"MERENI_KONVERZI"'
+            tests:
+              - unique
+              - not_null
+          - name: '"PROVOZOVNA"'
+            tests:
+              - unique
+              - not_null
+          - name: '"TYP"'
+            tests:
+              - unique
+              - not_null
+          - name: '"WEB"'
+            tests:
+              - unique
+              - not_null
+          - name: '"ZARIZENI"'
+            tests:
+              - unique
+              - not_null
+          - name: '"ZBOZI_INZERATY"'
+            tests:
+              - unique
+              - not_null
+          - name: '"ZDROJ_NAVSTEVY"'
+            tests:
+              - unique
+              - not_null

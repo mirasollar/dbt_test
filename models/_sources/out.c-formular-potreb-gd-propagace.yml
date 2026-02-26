@@ -1,0 +1,18 @@
+---
+version: 2
+sources:
+  - name: out.c-formular-potreb-gd-propagace
+    freshness:
+      warn_after:
+        count: 1
+        period: day
+    database: '{{ env_var("DBT_KBC_DEV_DATABASE") }}'
+    schema: out.c-formular-potreb-gd-propagace
+    loaded_at_field: '"_timestamp"'
+    tables:
+      - name: formular_potreb_novy_gd_propagace
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []

@@ -1,0 +1,22 @@
+---
+version: 2
+sources:
+  - name: in.c-seznam-ex-szn-rus-userdata-01jzwg5wyvy43w2w4yfy1sh7q1
+    freshness:
+      warn_after:
+        count: 1
+        period: day
+    database: '{{ env_var("DBT_KBC_DEV_DATABASE") }}'
+    schema: in.c-seznam-ex-szn-rus-userdata-01jzwg5wyvy43w2w4yfy1sh7q1
+    loaded_at_field: '"_timestamp"'
+    tables:
+      - name: mso_dev_email_rus
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns:
+          - name: '"rus_id"'
+            tests:
+              - unique
+              - not_null

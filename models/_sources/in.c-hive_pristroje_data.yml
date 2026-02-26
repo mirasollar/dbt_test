@@ -1,0 +1,244 @@
+---
+version: 2
+sources:
+  - name: in.c-hive_pristroje_data
+    freshness:
+      warn_after:
+        count: 1
+        period: day
+    database: '{{ env_var("DBT_KBC_DEV_DATABASE") }}'
+    schema: in.c-hive_pristroje_data
+    loaded_at_field: '"_timestamp"'
+    tables:
+      - name: ciselnik_zone_name
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: floating_historie_2017_report
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: hive_pristroje_increment
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns:
+          - name: '"rok_mesic"'
+            tests:
+              - unique
+              - not_null
+          - name: '"ad_id"'
+            tests:
+              - unique
+              - not_null
+          - name: '"zone_id"'
+            tests:
+              - unique
+              - not_null
+          - name: '"hw_simple"'
+            tests:
+              - unique
+              - not_null
+      - name: hive_pristroje_sekce_increment
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns:
+          - name: '"rok_mesic"'
+            tests:
+              - unique
+              - not_null
+          - name: '"ad_id"'
+            tests:
+              - unique
+              - not_null
+          - name: '"zone_id"'
+            tests:
+              - unique
+              - not_null
+          - name: '"hw_simple"'
+            tests:
+              - unique
+              - not_null
+          - name: '"section_simple"'
+            tests:
+              - unique
+              - not_null
+      - name: pristroje_2018_01
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: pristroje_2018_01_sekce
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: pristroje_2018_02
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: pristroje_2018_02_sekce
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: pristroje_2018_03
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: pristroje_2018_03_sekce
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: pristroje_2018_04
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: pristroje_2018_04_sekce
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: pristroje_2018_05
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: pristroje_2018_05_sekce
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: pristroje_2018_06
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: pristroje_2018_06_sekce
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: pristroje_2018_07
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: pristroje_2018_07_sekce
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: pristroje_2018_07_sekce_kontrola
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: pristroje_2018_08
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: pristroje_2018_08_sekce
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: pristroje_2018_09
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: pristroje_2018_09_sekce
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: pristroje_2018_10
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: pristroje_2018_10_sekce
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: pristroje_incremental_test
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns:
+          - name: '"rok_mesic"'
+            tests:
+              - unique
+              - not_null
+          - name: '"ad_id"'
+            tests:
+              - unique
+              - not_null
+          - name: '"zone_id"'
+            tests:
+              - unique
+              - not_null
+          - name: '"hw_simple"'
+            tests:
+              - unique
+              - not_null
+      - name: pritroje_2018_07_kontrola
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: rozpad_floatingu_2018_01
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: test_2018_11_simple
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: test_zari_simple
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []

@@ -1,0 +1,30 @@
+---
+version: 2
+sources:
+  - name: out.c-firmy_encashing_history
+    freshness:
+      warn_after:
+        count: 1
+        period: day
+    database: '{{ env_var("DBT_KBC_DEV_DATABASE") }}'
+    schema: out.c-firmy_encashing_history
+    loaded_at_field: '"_timestamp"'
+    tables:
+      - name: ciselnik
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: dataset_3_4_python
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
+      - name: vystup_firmy_encashing_history
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []

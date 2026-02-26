@@ -1,0 +1,18 @@
+---
+version: 2
+sources:
+  - name: out.c-parse_tv_json_leden_2022
+    freshness:
+      warn_after:
+        count: 1
+        period: day
+    database: '{{ env_var("DBT_KBC_DEV_DATABASE") }}'
+    schema: out.c-parse_tv_json_leden_2022
+    loaded_at_field: '"_timestamp"'
+    tables:
+      - name: novy_televizni_json_vystup_leden_2022
+        quoting:
+          database: true
+          schema: true
+          identifier: true
+        columns: []
