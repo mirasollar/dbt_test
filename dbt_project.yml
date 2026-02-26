@@ -13,8 +13,6 @@ models:
   mso_dev_dbt_project:
     staging:
       +materialized: table
-      +schema: staging
     marts:
       +materialized: incremental
       +on_schema_change: sync_all_columns
-      +schema: marts
