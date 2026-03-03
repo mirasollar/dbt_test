@@ -14,3 +14,8 @@ sources:
         description: Raw client data from fake extractor
       - name: fake_revenue
         description: Raw revenue transactions from fake extractor
+        freshness:
+          warn_after:
+            count: 30
+            period: day
+        loaded_at_field: date
