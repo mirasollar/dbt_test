@@ -18,4 +18,4 @@ sources:
           warn_after:
             count: 30
             period: day
-        loaded_at_field: '"date"'
+        loaded_at_field: '"date"::DATE'
