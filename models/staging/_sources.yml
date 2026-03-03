@@ -16,9 +16,9 @@ sources:
         description: Raw revenue transactions from fake extractor
         freshness:
           warn_after:
-            count: 10
+            count: 1
             period: day
           error_after:
-            count: 10
+            count: 30
             period: day
         loaded_at_field: '"date"::TIMESTAMP'
