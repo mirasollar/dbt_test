@@ -12,10 +12,7 @@ WITH monthly_aggregation AS (
         client_id,
         DATE_TRUNC('month', revenue_date) AS month,
         SUM(revenue_amount) AS total_revenue,
-        COUNT(*) AS transaction_count,
-        AVG(revenue_amount) AS avg_revenue,
-        MIN(revenue_amount) AS min_revenue,
-        MAX(revenue_amount) AS max_revenue
+        COUNT(*) AS transaction_count
     FROM {{ ref('stg_fake_revenue') }}
     
     {% if is_incremental() %}
@@ -28,16 +25,13 @@ WITH monthly_aggregation AS (
 )
 
 SELECT
-    m.month,
+    m.month::DATE AS month,
     m.client_id,
     c.client_name,
     c.email,
     c.city,
-    m.total_revenue,
-    m.transaction_count,
-    m.avg_revenue,
-    m.min_revenue,
-    m.max_revenue
+    m.total_revenue::DECIMAL(10,2) AS total_revenue,
+    m.transaction_count
 FROM monthly_aggregation m
 LEFT JOIN {{ ref('stg_fake_client') }} c
     ON m.client_id = c.client_id
