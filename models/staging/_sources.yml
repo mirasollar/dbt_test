@@ -10,9 +10,6 @@ sources:
       schema: true
       identifier: true
     tables:
-      - name: fake_client
-        description: Raw client data from fake extractor
-        freshness: null
       - name: fake_revenue
         description: Raw revenue transactions from fake extractor
         freshness:
@@ -20,6 +17,6 @@ sources:
             count: 1
             period: day
           error_after:
-            count: 2
+            count: 10
             period: day
         loaded_at_field: '"date"::TIMESTAMP'
