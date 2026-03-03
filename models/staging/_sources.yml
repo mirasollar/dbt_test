@@ -10,6 +10,8 @@ sources:
       schema: true
       identifier: true
     tables:
+      - name: fake_client
+        description: Raw clients from fake extractor
       - name: fake_revenue
         description: Raw revenue transactions from fake extractor
         freshness:
