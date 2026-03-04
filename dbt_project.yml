@@ -8,3 +8,8 @@ quoting:
   database: true
   schema: true
   identifier: true
+
+models:
+  mso_dev_dbt_project:
+    _sources:
+      +enabled: false
